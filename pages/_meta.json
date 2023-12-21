@@ -5,15 +5,16 @@
   "slack-administration": "Slack Administration",
   "web-community": "Web Community",
   "slack-community-best-practices": "Slack Community Best Practices",
-
-  "about": {
-    "title": "Documentation",
-    "type": "page"
-  },
   "contact": {
-    "title": "Tightknit.ai ↗",
+    "title": "Homepage ↗",
     "type": "page",
     "href": "https://tightknit.ai",
+    "newWindow": true
+  },
+  "community": {
+    "title": "Community ↗",
+    "type": "page",
+    "href": "https://community.tightknit.ai",
     "newWindow": true
   }
 }
