@@ -2,7 +2,7 @@
 
 This is the documentation content and site for Tightknit, powered by [Nextra](https://nextra.site).
 
-https://tightknit-documentation.vercel.app
+[**Live Docs ↗**](https://tightknit-documentation.vercel.app)
 
 ## Local Development
 
