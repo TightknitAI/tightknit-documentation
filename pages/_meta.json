@@ -1,15 +1,19 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "index": "Overview",
+  "getting-started": "Getting Started",
+  "basics": "Basics",
+  "slack-administration": "Slack Administration",
+  "web-community": "Web Community",
+  "slack-community-best-practices": "Slack Community Best Practices",
+
   "about": {
-    "title": "About",
+    "title": "Documentation",
     "type": "page"
   },
   "contact": {
-    "title": "Contact ↗",
+    "title": "Tightknit.ai ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://tightknit.ai",
     "newWindow": true
   }
 }

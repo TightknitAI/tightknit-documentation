@@ -1,18 +1,11 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
-  project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
-  },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  logo: <span>Tightknit Docs</span>,
+  docsRepositoryBase: "https://github.com/TightknitAI/tightknit-documentation",
   footer: {
-    text: 'Nextra Docs Template',
+    text: "Tightknit",
   },
-}
+};
 
-export default config
+export default config;
