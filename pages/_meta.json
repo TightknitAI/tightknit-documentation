@@ -1,7 +1,11 @@
 {
   "index": "Overview",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "getting-started": "Getting Started",
+  "basics": "Basics",
+  "slack-administration": "Slack Administration",
+  "web-community": "Web Community",
+  "slack-community-best-practices": "Slack Community Best Practices",
+
   "about": {
     "title": "Documentation",
     "type": "page"
