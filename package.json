@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "lint": "next lint",
     "start": "next start"
   },
   "repository": {
@@ -21,6 +22,10 @@
   },
   "devDependencies": {
     "@types/node": "18.11.10",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-mdx": "^3.0.0",
+    "prettier": "^3.1.1",
     "typescript": "^4.9.3"
   }
 }
