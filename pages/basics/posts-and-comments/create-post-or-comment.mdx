@@ -1,0 +1,50 @@
+# Create a Post or Comment
+
+Creating new content in your community is as simple as sending messages in Slack!
+
+## Posts
+
+Once a Slack channel has been connected to a Tightknit feed, all new messages sent within that channel
+are synced to the community as **Posts**.
+
+Our Slack bot will reply with a notification that your post is now synced and link to the post in the community.
+
+import { Callout } from "nextra/components";
+
+<Callout type="info">
+  The bot notification in Slack will be a non-public ephemeral message if Quiet
+  Mode is enabled.
+</Callout>
+
+![New Slack message](/new-slack-message2.png)
+
+![New community post](/new-post.png)
+
+The community post will respect the posted date of the original Slack message. All posts contain a permalink back to the original Slack message.
+
+### Title & Slug
+
+The post title and URL slug are automatically generated using AI.
+If you prefer a different title or slug, [you can edit it using the message shortcut](./edit-post-or-comment.mdx).
+
+## Comments
+
+Any replies on a synced Slack message are synced to the community as **Comments** on the Post.
+
+![New Slack reply](/new-slack-reply.png)
+
+![New community comment](/new-comment.png)
+
+The community comment will respect the posted date of the original Slack message. All comments contain a permalink back to the original Slack message.
+
+## Message Shortcut - Sync an Entire Message Thread
+
+Let's say you have a Slack message that is not synced to the community. Perhaps it is a message sent prior
+to your Tightknit installation date; or it was previously synced but a user removed it from the community using the message shortcut.
+
+You can simply re-sync it to the community using the Tightknit [message shortcut](../message-shortcuts.mdx).
+
+<Callout>
+  Using the message shortcut will sync the entire message thread at once,
+  including the post, any commment(s), file attachments, emoji reactions, etc.
+</Callout>
