@@ -1,5 +1,6 @@
 {
-  "create-post": "Create a New Post or Comment",
-  "edit-post": "Edit a Post or Comment",
-  "delete-post": "Delete a New Post or Comment"
+  "create-post-or-comment": "Create a post or comment",
+  "edit-post-or-comment": "Edit a post or comment",
+  "delete-post-or-comment": "Delete a post or comment",
+  "emoji-reactions": "Emoji reactions"
 }

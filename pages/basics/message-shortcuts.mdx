@@ -1,3 +1,43 @@
-# Satori
+# Message Shortcuts
 
-Satori (悟り) is a Japanese Buddhist term for awakening, "comprehension; understanding".
+import { Callout } from "nextra/components";
+import { Tabs } from "nextra/components";
+import { Steps } from "nextra/components";
+
+Use the Tightknit message shortcuts in Slack to manage your posts and comments in the community.
+
+## How to Access Shortcuts in Slack
+
+<Steps>
+### Step 1
+
+<Tabs items={["Desktop", "Mobile"]}>
+  <Tabs.Tab>
+    **Desktop**: Hover over the message, and click the three dots icon `⋮`
+    <br />
+    ![Slack message shortcuts hover](/message-shortcuts-hover.png)
+  </Tabs.Tab>
+  <Tabs.Tab>**Mobile**: Tap and hold the message</Tabs.Tab>
+</Tabs>
+
+### Step 2
+
+The app shortcuts will be at the bottom of the menu. Find the options that have the Tightknit name and logo.
+
+![Slack message shortcuts](/message-shortcuts.png)
+
+If you don't see any Tightknit options, click `More message shortcuts...` and then search for "Tightknit" or the [name of the shortcut](#tightknit-shortcuts).
+
+![Slack message shortcuts search](/message-shortcuts-search.png)
+
+</Steps>
+
+<Callout type="info">You cannot use shortcuts on ephemeral messages.</Callout>{" "}
+
+## Tightknit Shortcuts
+
+| **Name**                 | **Description**                                                                                                                                                                                                                                  | **Where can I use it?**                                                                                                             | **Who can use it?**                 |
+| :----------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------- |
+| Post to community        | Syncs an entire message thread to the community, including the post, any comments, file attachments, emojis, etc.<br/><br/>Has no affect on already synced posts.                                                                                | Slack message (Post)                                                                                                                | Admin                               |
+| Edit post title and slug | Updates the title and/or slug of the corresponding post in the community. <Callout type="warning">Modifying the slug will change the URL for the post and break any existing links or bookmarks to the page.</Callout>                           | Any message in Slack thread                                                                                                         | Admin                               |
+| Delete from community    | Removes the post or comment from the community only. The original slack message is unaffected.<br/><br/>Deleting a post will also remove its comments. Deleting an individual comment will not affect the post or the remainder of the comments. | **Delete a post:**<br/>Use on Slack message, or Tightknit bot reply.<br/><br/>**Delete a comment:**<br/>Use on Slack message reply. | Admin, or the author of the message |
