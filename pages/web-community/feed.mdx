@@ -1,3 +1,100 @@
+import { Steps } from "nextra/components";
+
 # Feed
 
-This is the index page for the Advanced folder!
+The **Feed detail page** displays the sorted posts within that feed. They are connected to your Slack channels.
+
+## Overview
+
+Feed pages are found at the URL path `/x/<feed-slug>`.
+
+![Community feed page](/web-community/feed.png)
+
+### Unlisted Feeds
+
+Unlisted feeds are only accessible by directly visiting the URL. They are excluded from sidebar links and SEO.
+
+## "About" & "Topic" Section
+
+Describes the purpose and topic of your feed. This section is linked to the `Description` and `Topic`, respectively, of your Slack channels
+and will be updated automatically [when the channel is updated](../basics/how-items-sync.mdx).
+
+![About section](/web-community/about-section.png)
+
+If either of these sections are empty, they are not shown on the page.
+
+## Sorting
+
+Use the feed sort select menu to choose the order the feed posts are displayed.
+
+![Feed sort](/web-community/sorting.png)
+
+Depending on the feed type, you may see the following options:
+
+- **Most Recent Activity** - the posts with the most recent comments are highest
+- **Newest** - the posts created most recently are highest
+- **Oldest** - the oldest posts are highest
+
+User sorting preferences are remembered on a per feed basis.
+
+## Display Settings
+
+Use the feed post display select menu to choose the format in which feed posts are displayed.
+
+User display setting preferences are remembered on a per feed basis.
+
+### Snippet
+
+Includes the body of the post, up to a certain length, and attachments.
+
+![Feed display "Snippet"](/web-community/display-snippet.png)
+
+### Compact
+
+Displays only the title and some activity stats.
+
+![Feed display "Compact"](/web-community/display-compact.png)
+
+## Share
+
+Click the `Share` button to bring up the Share modal.
+
+![Share button](/web-community/share-button.png)
+
+Share the current feed to your favorite socials, and let the world know about this awesome feed! 😎
+
+![Share modal](/web-community/share-modal.png)
+
+## Follow (RSS)
+
+Click the `Follow` button to bring up the RSS modal.
+
+![Follow button](/web-community/follow-button.png)
+
+Use your favorite RSS reader to keep up-to-date with the latest posts in the feed.
+
+![RSS modal](/web-community/rss-modal.png)
+
+### Subscribing in Slack
+
+💡 Slack has a nifty tool to subscribe to RSS updates within a channel!
+
+<Steps>
+
+### Slack `feed` Command
+
+Simply start typing a message in your channel and type `/feed <RSS-LINK>`,
+where the RSS link is replaced with the link shown in the Tightknit RSS modal.
+
+![RSS Slack setup](/web-community/rss-slack1.png)
+
+### Subscribe
+
+Once the command is entered, your slack channel will
+now be notified every time there is a new post made in the Tightknit feed.
+
+![RSS Slack received](/web-community/rss-slack2.png)
+
+Slack is feeding into Tightknit feeding into Slack! 🤯
+
+</Steps>

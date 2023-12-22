@@ -3,7 +3,6 @@
   "home": "Home",
   "feed": "Feed",
   "post": "Post",
-  "leaderboard-directory": "Leaderboard & Directory",
-  "profile-page": "Profile",
-  "seo": "SEO"
+  "leaderboard-and-directory": "Leaderboard & Directory",
+  "profile": "Profile"
 }
