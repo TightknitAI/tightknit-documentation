@@ -1,5 +1,35 @@
+import { Callout } from "nextra/components";
+
 # Profile
 
-The **Profile detail page**
+The **Profile detail page** shows the user's info and activity within the community.
+
+Profile detail pages are found at the URL path `/user/<profile-id>`.
+Note that the id belongs to the user's _Tightknit_ profile, not their Slack profile.
+
+Admin users have `ADMIN` badge next to their name.
+Users connected to Slack bots or apps will have an `APP` badge next to their name.
 
 ![Profile detail page](/web-community/profile.png)
+
+## Profile Tabs
+
+### Overview
+
+The **Overview** tab contains a feed of the user's combine post and comment activity in all feeds,
+except unlisted feeds. It also displays certain profile fields from the user's Slack profile ([configured in the Tightknit app](../slack-administration/member-settings.mdx)).
+
+<Callout>
+  Curious when a user's profile info is synced from Slack to the community? See
+  [How Items Are Synced](../basics/how-items-sync.mdx).
+</Callout>
+
+### Posts
+
+The **Posts** tab contains a count of the user's authored posts and a feed containing the user's post activity in all feeds,
+except unlisted feeds.
+
+### Comments
+
+The **Comments** tab contains a count of the user's authored comments and a feed containing the user's comment activity in all feeds,
+except unlisted feeds.
