@@ -17,6 +17,14 @@ Deleting a top-level Slack message will remove the corresponding post _and_ and 
 
 Deleting a message reply in Slack will remove only that comment from the post in the community. The remainder of the comments will be preserved.
 
+import { Callout } from "nextra/components";
+
+<Callout type="info">
+  Deleting the Tightknit bot notification reply will also remove the post and
+  any of its comments from the community. To stop all bot post replies, enable
+  Quiet Mode.
+</Callout>
+
 ## Message Shortcut - Remove from Community Only
 
 If you want to preserve your message in Slack but remove it only from the community, you can use the Tightknit [message shortcut](../message-shortcuts.mdx).
