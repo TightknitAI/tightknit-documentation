@@ -3,17 +3,6 @@ import { useRouter } from "next/router";
 import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  chat: {
-    link: "https://join.slack.com/t/tightknit-community/shared_invite/zt-26k3pxe3p-n~daN~zi2dMN2NmXvdMArw",
-    icon: (
-      <Image src="/slack-logo.svg" width={30} height={30} alt="Slack logo" />
-    ),
-  },
-  docsRepositoryBase: "https://github.com/TightknitAI/tightknit-documentation",
-  editLink: { text: null },
-  footer: {
-    text: "Tightknit",
-  },
   logo: (
     <>
       <Image
@@ -25,6 +14,12 @@ const config: DocsThemeConfig = {
       <span style={{ marginLeft: ".1em", fontWeight: 600 }}>Docs</span>
     </>
   ),
+  chat: {
+    link: "https://join.slack.com/t/tightknit-community/shared_invite/zt-26k3pxe3p-n~daN~zi2dMN2NmXvdMArw",
+    icon: (
+      <Image src="/slack-logo.svg" width={30} height={30} alt="Slack logo" />
+    ),
+  },
   head: (
     <>
       <title>Tightknit Docs</title>
@@ -34,10 +29,23 @@ const config: DocsThemeConfig = {
       <link rel="icon" href="https://i.imgur.com/tJIWbqD.png"></link>
     </>
   ),
+  footer: {
+    // component: (
+    //   <Image
+    //     src={"/TightknitNameLogo.webp"}
+    //     alt="Tighknit Logo"
+    //     width={145}
+    //     height={40}
+    //   />
+    // ),
+    text: "Copyright © 2023 Tightknit, Inc.",
+  },
   sidebar: {
-    defaultMenuCollapseLevel: 1,
     toggleButton: true,
   },
+  docsRepositoryBase:
+    "https://github.com/TightknitAI/tightknit-documentation/tree/main/",
+  editLink: { text: "Edit this page on Github" },
   useNextSeoProps() {
     const { asPath } = useRouter();
     if (asPath !== "/") {
