@@ -1,7 +1,5 @@
 {
   "community-settings": "Community Settings",
-  "community-branding": "Community Branding",
   "member-settings": "Member Settings",
-  "integrations": "Integrations",
-  "manage-feed": "Manage Feeds"
+  "feed-settings": "Feed Settings"
 }

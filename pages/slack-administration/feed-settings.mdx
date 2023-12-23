@@ -1,0 +1,52 @@
+import { Callout } from "nextra/components";
+
+# Feed Settings
+
+Feeds are the backbone of all community posts.
+Each feed correlates with a channel to control how and when messages are posted to the channel.
+Feeds can be created, edited, and unlisted from the Feed Settings page.
+
+## Create a new Feed
+
+To create a new feed, click the `Create Feed` button within the Feeds section.
+
+![Create a new Feed Button](/FeedCreateButton.png)
+
+This will open a modal where you can enter the details of your new feed.
+Here you will need to choose:
+
+- **Selected Channel** - The channel that this feed will listen to for new messages.
+- **Feed Name** - The name of the feed. This will be used to identify the feed in the Feeds section on the Web Community.
+- **Feed Slug** - The slug of the feed. This will be used in the URL of the feed. Try to keep this short and simple and something that will change infrequently.
+
+Once you have entered the details of your new feed, click the `Create` button to create the feed.
+
+![Feed Create Modal](/FeedCreateModal.png)
+
+## Update an existing Feed
+
+To update an existing feed, open the Feed Settings Menu on the feed row you wish to update.
+
+![Feed Settings Menu](/FeedSettingsMenu.png)
+
+### Edit Feed
+
+To edit an existing feed, click the `Edit` button within the Feeds Edit Menu.
+
+In the new modal, you'll be able to edit the following:
+
+- **Feed Name** - The name of the feed. This will be used to identify the feed in the Feeds section on the Web Community.
+- **Feed Slug** - The slug of the feed. This will be used in the URL of the feed. Try to keep this short and simple and something that will change infrequently.
+
+<Callout type="warning" emoji="⚠️">
+  Updating a feed's slug will change the URL of the feed. This will break any
+  links to the feed that have been shared.
+</Callout>
+
+![Edit Feed Modal](/FeedUpdateModal.png)
+
+### Sync a Feed
+
+To sync an existing feed, click the `Sync` button within the Feeds Edit Menu.
+
+This will trigger a sync of the feed, which will pull the Description and Topic of the channel and update the feed's description and topic accordingly.

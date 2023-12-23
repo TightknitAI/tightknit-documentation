@@ -1,1 +1,60 @@
-# Another Page
+import { Callout } from "nextra/components";
+
+# Member Settings
+
+These settings are used to configure your user member profiles and allowed Slack bots for the site.
+
+![Tightknit Member Settings Section](/MemberSettings.png)
+
+## Member UI Settings
+
+In the `Member UI Settings` section, you can configure how members show up within the leaderboard and directory.
+
+![Tightknit Member UI Settings](/MemberSettingsModal.png)
+
+### Members List - Max Display Limit
+
+This setting controls the maximum number of members that will be displayed in both the leaderboard and the directory. By default, this is set to 10.
+
+### Leaderboard Members
+
+This is an optional checkbox setting to exclude admins from the leaderboard. By default, admins are removed from the leaderboard.
+
+## Profile Fields
+
+In the `Profile Fields` section, you can configure which fields are displayed on the member profile page.
+
+![Tightknit Profile Fields Settings](/MemberProfileModal.png)
+
+These profile fields are populated from the Slack profile fields that are configured in the Slack workspace.
+Only active profile fields will be displayed on the modal for selection.
+
+You can configure these fields in the Slack workspace by going to `Customize Workspace` > `Profiles`.
+Go [here](https://slack.com/help/articles/212281478-Customize-member-profiles) to learn more.
+
+<Callout type="warning" emoji="⚠️">
+  Known Limitation: Currently we can only show 10 profile fields on this panel.
+  If you have more than 10 profile fields, please reach out to
+  [support](mailto:support@tightknit.ai).
+</Callout>
+
+## Allowed Bot Profiles
+
+Tightknit is rarely the only bot in a Slack workspace. It's common to have a few bots that do different things.
+For example, you might have a bot that posts a daily message to a channel, or a bot that posts a message when a new user joins the workspace.
+
+And sometimes, you want this content to be viewable in your Tightknit Web Community so that it can be viewed publicly and indexed.
+In order to do this, you need to make sure that the bot is configured to post messages to the feed that Tightknit is supporting.
+
+### Configuring a bot to post to Tightknit
+
+You can configure which bots are allowed to post into the Tightknit Web Community by adding them within the `Allowed Bot Profiles` section of the Member Settings.
+
+Up to three Slack bots can be configured to post to the Tightknit Web Community. Please reach out to [support](mailto:support@tightknit.ai) if you need more.
+
+![Tightknit Community Bot Profile Modal](/CommunityBotProfileModal.png)
+
+<Callout type="info" emoji="ℹ️">
+  Only include bots in this dropdown. All real members are already allowed so no
+  need to add them manually.
+</Callout>

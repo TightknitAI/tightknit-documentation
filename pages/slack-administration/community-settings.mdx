@@ -1,1 +1,89 @@
-# Another Page
+import { Callout, Steps } from "nextra/components";
+
+# Community Settings
+
+These settings allow you to configure your community branding and how Tightknit interacts across your entire workspace.
+You can find these settings in your Tightknit Slack Application under the `Community Settings` section.
+
+![Tightknit Community Settings Section](/CommunitySettings.png)
+
+## Community Details
+
+Within the Community Details modal, you can configure the following:
+
+- **Community Name** - This is the name of your community.
+  This will be used as the title of your Tightknit Web Community as well as the title within SEO metadata.
+- **Site Slug** - This is the subdomain that will be used when you host your community on `tightknit.community`.
+  <Callout type="info" emoji="ℹ️">
+    If you're interested in using a custom domain, please reach out to
+    [support](mailto:support@tightknit.ai) or ask for help within the Slack
+    community.
+  </Callout>
+  <Callout type="warning" emoji="⚠️">
+    If not on a custom domain, updating a sites's slug will change the URL of
+    all community pages that use this slug. This will break any links that have
+    been shared.
+  </Callout>
+
+![Tightknit Community Details Modal](/CommunityUpdateModal.png)
+
+## Community Settings
+
+Within the Community Settings modal, you can configure the following:
+
+- **Call-to-Action Text** - This is the text that is present on the Slack button across the Tightknit Web Community experience.
+- **Call-to-Action URL** - This is the URL that the Slack button will redirect to when clicked.
+- **Quiet Mode** - When this setting is off, Tightknit will send a message as a thread for every message that has been posted in an activated channel.
+  When this setting is on, Tightknit will never send any standard messages.
+
+  <Callout type="info" emoji="ℹ️">
+    In quiet mode, users will continue to see ephemeral messages when they
+    perform an action using a Tightknit shortcut.
+  </Callout>
+
+![Tightknit Community Integration Modal](/CommunitySettingsModal.png)
+
+## Integrations
+
+Within the Integrations modal, you can configure Google Tag Manager.
+
+Google Tag Manager is a free tool that allows you to manage and deploy marketing tags (snippets of code or tracking pixels) on your website without having to modify the code.
+
+### How to setup Google Tag Manager
+
+<Steps>
+### Create a Google Tag Manager account and container
+ 
+Visit [Google Tag Manager](https://tagmanager.google.com/) and create an account for your company.
+
+1. Click the Admin tab
+2. Click the + button next to the Container section.
+3. Copy the Google Tag Manager ID (GTM-XXXXXX)
+4. Paste it into the Tightknit Integrations modal within Slack.
+
+![TightknitCommunity Integration Modal](/CommunityIntegrationModal.png)
+
+### [Optional] Connect a Google Analytics Property
+
+Visit [Google Analytics](https://analytics.google.com/analytics/web/).
+
+For each website you own, you can create a “Property”.
+To create a property, follow these steps:
+
+1. Click the `⚙ Admin` Button in the bottom left corner
+2. Click the `+Create` button and select Property
+3. Copy the Measurement ID (G-XXXXXXXXXX)
+
+Now we'll return back to [Google Tag Manager](https://tagmanager.google.com/) to add the Google Analytics Property to our container.
+To create a new Tag, follow these steps:
+
+1. Under Workspace, navigate to Tags on the left hand navigation
+2. Click the New button
+3. Click the Tag Configuration section and select Google Analytics > Google Tag
+4. Paste the Measurement ID from above (G-XXXXXXXXXX) into the Tag ID field
+5. Click the Triggering section, select Trigger Configuration, and then 'Initialization - All Pages'
+6. Click the Save button in the top right corner
+
+</Steps
+
+>
