@@ -1,0 +1,30 @@
+# Delete a Post or Comment
+
+Once you delete your message in Slack, we'll remove the corresponding post or comment in the web community.
+
+## Slack Action
+
+When you delete your Slack message using the [Delete action](https://slack.com/help/articles/202395258-Edit-or-delete-messages#delete-a-message), your post or comment will
+automatically be removed from the web community.
+
+![Delete Slack message](/delete-message.png)
+
+### Posts
+
+Deleting a top-level Slack message will remove the corresponding post _and_ and of its comments from the web community.
+
+### Comments
+
+Deleting a message reply in Slack will remove only that comment from the web community. The post and the remainder of the comments will be preserved.
+
+import { Callout } from "nextra/components";
+
+<Callout type="info">
+  Deleting the Tightknit bot notification reply will also remove the post and
+  any of its comments from the web community. To stop all bot post replies,
+  enable Quiet Mode.
+</Callout>
+
+## Message Shortcut - Remove from Web Community Only
+
+If you want to preserve your message in Slack and remove it only from the web community, you can use the Tightknit [message shortcut](../message-shortcuts.mdx).

@@ -1,0 +1,87 @@
+# Create a Post or Comment
+
+Creating new content in your web community is as simple as sending messages in Slack!
+
+## Posts
+
+Once a Slack channel has been connected to a Tightknit feed, all new messages sent within that channel
+are synced to the web community as **Posts**.
+
+Our Slack bot will reply with a notification that your post is now synced and link to the post in the web community.
+
+import { Callout } from "nextra/components";
+
+<Callout type="info">
+  The bot notification in Slack will be a non-public ephemeral message if Quiet
+  Mode is enabled.
+</Callout>
+
+![New Slack message](/new-slack-message2.png)
+
+![New community post](/new-post.png)
+
+The web community post will respect the posted date of the original Slack message. All posts contain a permalink back to the original Slack message.
+
+### Title & Slug
+
+The post title and URL slug are automatically generated using AI.
+If you prefer a different title or slug, [you can edit it using the message shortcut](./edit-post-or-comment.mdx).
+
+### Posts from Bot Users
+
+Posts will only appear by bot users that have been [configured to allow posting in the feed](../../slack-administration/manage-feed.mdx).
+
+<Callout type="warning">
+  **Known Issue**: Slack bots that send _only_ Block Kit UI for their messages
+  are not support. Tightknit will only sync the `text` of a slack message. If
+  you are seeing issues with bot messages in you web community, please contact
+  [support](mailto:support@tightknit.ai).
+</Callout>
+
+## Comments
+
+Any replies on a synced Slack message are synced to the web community as **Comments** on the Post.
+
+![New Slack reply](/new-slack-reply.png)
+
+![New community comment](/new-comment.png)
+
+The web community comment will respect the posted date of the original Slack message. All comments contain a permalink back to the original Slack message.
+
+<Callout>
+  Tightknit treats all top-level Slack messages as posts in the Web Community
+  and all replies as comments. When responding to someone in a Slack channel, it
+  is recommended to always reply in the message thread. Otherwise, consecutive
+  top-level messages will each create distinct posts in the Web Community
+  without context of each other.
+</Callout>
+
+## Message Shortcut - Sync a Message to the Web Community
+
+Let's say you have a Slack message that is not synced to the web community. Perhaps it is a message sent prior
+to your Tightknit installation date; or it was previously synced but a user removed it from the web community using the message shortcut.
+
+You can simply re-sync it to the web community using the Tightknit [message shortcut](../message-shortcuts.mdx).
+
+<Callout>
+  Using the message shortcut will sync the entire message thread at once,
+  including the post, any of its commments, file attachments, emoji reactions,
+  etc.
+</Callout>
+
+## @Mentions and Tags
+
+Tightknit will convert most @mention and tags within the body of a message to the equivalent name and link within the Web Community.
+
+| **Slack @mention**                   | **Tightknit display text**                                                                                                                                                 | **Tightknit link** |
+| :----------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
+| @User                                | By default, uses the Slack profile full name. Please contact [support](mailto:support@tightknit.ai) if you need a different name display style.                            | User profile page  |
+| #Channel                             | • If channel has connected feed: feed name<br/>• If no connected feed: channel name (text only, no link)<br/>• If private channel: `🔒[private feed]` (text only, no link) | Feed page          |
+| @User group                          | Name of group (text only, no link)                                                                                                                                         |                    |
+| @here,<br/> @channel,<br/> @everyone | Text only, no link                                                                                                                                                         |                    |
+
+User and Channel tags in web community content will be dynamically updated if the associated name changes in Slack.
+
+|                   Slack Message                   |                      Tightknit Post                       |
+| :-----------------------------------------------: | :-------------------------------------------------------: |
+| ![Slack @mention and tags](/at-mention-slack.png) | ![Community @mention and tags](/at-mention-community.png) |
