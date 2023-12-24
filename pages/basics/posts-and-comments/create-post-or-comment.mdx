@@ -27,17 +27,6 @@ The web community post will respect the posted date of the original Slack messag
 The post title and URL slug are automatically generated using AI.
 If you prefer a different title or slug, [you can edit it using the message shortcut](./edit-post-or-comment.mdx).
 
-### Posts from Bot Users
-
-Posts will only appear by bot users that have been [configured to allow posting in the feed](../../slack-administration/manage-feed.mdx).
-
-<Callout type="warning">
-  **Known Issue**: Slack bots that send _only_ Block Kit UI for their messages
-  are not support. Tightknit will only sync the `text` of a slack message. If
-  you are seeing issues with bot messages in you web community, please contact
-  [support](mailto:support@tightknit.ai).
-</Callout>
-
 ## Comments
 
 Any replies on a synced Slack message are synced to the web community as **Comments** on the Post.
@@ -85,3 +74,19 @@ User and Channel tags in web community content will be dynamically updated if th
 |                   Slack Message                   |                      Tightknit Post                       |
 | :-----------------------------------------------: | :-------------------------------------------------------: |
 | ![Slack @mention and tags](/at-mention-slack.png) | ![Community @mention and tags](/at-mention-community.png) |
+
+## Messages from Bot Users
+
+Posts and comments by bot users will only be synced to the Web Community if the bot user has been [configured to allow posting in the feed](../../slack-administration/manage-feed.mdx).
+
+<Callout type="warning">
+  **Known Issue**: Slack bots that send _only_ Block Kit UI for their messages
+  are not support. Tightknit will only sync the `text` of a slack message. If
+  you are seeing issues with bot messages in you web community, please contact
+  [support](mailto:support@tightknit.ai).
+</Callout>
+
+## Limitations
+
+- Emojis currently have limited support within post and comment bodies.
+  Custom emojis are unsupported and will appear in **:colon:** text form.
