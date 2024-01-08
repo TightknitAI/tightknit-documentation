@@ -1,3 +1,5 @@
+import { Callout } from "nextra/components";
+
 # Post
 
 The **Post detail page** displays a post and comments from a community feed.
@@ -17,10 +19,27 @@ The Post detail page generally includes:
 
 ## Display Settings
 
+The post detail display type is determined by the ["Post Detail Display" setting in the admin Feed settings]().
+
 ### Discussion
+
+The Discussion display is best suited for chats, FAQs, and traditional forum posts.
 
 ![Post detail page - Discussion](/web-community/post-detail-display-discussion.png)
 
 ### Blog
 
+The Blog display is best suited for blog posts, where the cover image should take front and center. The cover image is the first image file attachment on the associated Slack message, if any, and is not included in the attachments section if there are additional files.
+
 ![Post detail page - Blog](/web-community/post-detail-display-blog.png)
+
+#### Related Posts
+
+Related posts are displayed in a section at the bottom of the page.
+
+![Related Posts - Blog](/web-community/post-detail-related-blog.png)
+
+<Callout>
+  Related posts is currently in BETA. Please reach out to
+  [support](mailto:support@tightknit.ai) if you are interested in this feature.
+</Callout>
