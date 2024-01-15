@@ -1,8 +1,9 @@
 {
   "navbar-and-sidebar": "Navbar & Sidebar",
-  "home": "Home",
+  "home": "Home - Landing Page",
   "feed": "Feed",
   "post": "Post",
+  "trending": "Trending",
   "leaderboard-and-directory": "Leaderboard & Directory",
   "profile": "Profile"
 }
