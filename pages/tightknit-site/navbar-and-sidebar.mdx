@@ -1,4 +1,25 @@
-# Navbar & Sidebar
+import { FileTree } from "nextra/components";
+
+# Navigation
+
+The pages within your Tightknit site are organized as follows:
+
+<FileTree>
+  <FileTree.Folder name="pages" defaultOpen>
+    <FileTree.File name="/" />
+    <FileTree.File name="/trending" />
+    <FileTree.Folder name="/members">
+      <FileTree.File name="/leaderboard" />
+      <FileTree.File name="/directory" />
+    </FileTree.Folder>
+    <FileTree.Folder name="/x/<feed-slug>" defaultOpen>
+      <FileTree.File name="/<post-id>/<post-slug>" />
+    </FileTree.Folder>
+    <FileTree.Folder name="/user" defaultOpen>
+      <FileTree.File name="/<tightknit-user-id>" />
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>
 
 ## Navbar Header
 
