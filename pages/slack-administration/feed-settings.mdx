@@ -2,10 +2,8 @@ import { Callout } from "nextra/components";
 
 # Feed Settings
 
-Feeds are the backbone of all community posts.
-Each feed correlates with a channel to control how and when messages are posted to the channel.
-
-Feeds can be created, edited, and unlisted from the app settings. You can find these settings in your Tightknit Slack Application under the `Feeds` section.
+[Feeds](../tightknit-site/feed) are the backbone of all community posts.
+Each feed correlates with a channel to control how and when messages are posted to the feed. Feeds can be created, edited, and unlisted from the app settings. You can find these settings in your Tightknit Slack Application under the `Feeds` section.
 
 ![Tightknit Feed Settings Section](/slack-administration/feed-settings.png)
 
@@ -25,6 +23,7 @@ Here you will need to choose:
 
 Additional optional settings:
 
+- **Message Sync Settings** - By default, Tightknit will sync all incoming new Slack messages and replies to the feed. If you do _not_ want to auto-sync messages (e.g. you prefer to manually sync select posts using the [shortcut](../basics/message-shortcuts#tightknit-shortcuts)), uncheck this option.
 - **Emoji Icon** - The emoji icon, such as 📡, that is displayed next to the feed name in the Tightknit site sidebar. If none is set, the sidebar displays a default icon.
 - **Make feed unlisted** - Feeds that are unlisted are excluded from sidebar links and SEO, and are only accessible by directly visiting the URL.
 - **List View Display** - The default display setting for posts in the feed list view, such as Snippet, Compact, or Card. [Read More](../tightknit-site/feed.mdx#display-settings).
