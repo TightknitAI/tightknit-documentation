@@ -6,7 +6,7 @@ const config: DocsThemeConfig = {
   logo: (
     <>
       <Image
-        src={"/TightknitNameLogo.webp"}
+        src={"/TightknitNameLogo.png"}
         alt="Tighknit Logo"
         width={145}
         height={40}
@@ -15,7 +15,7 @@ const config: DocsThemeConfig = {
     </>
   ),
   chat: {
-    link: "https://join.slack.com/t/tightknit-community/shared_invite/zt-26k3pxe3p-n~daN~zi2dMN2NmXvdMArw",
+    link: "https://community.tightknit.ai/join",
     icon: (
       <Image src="/slack-logo.svg" width={30} height={30} alt="Slack logo" />
     ),
@@ -38,7 +38,7 @@ const config: DocsThemeConfig = {
     //     height={40}
     //   />
     // ),
-    text: "Copyright © 2023 Tightknit, Inc.",
+    text: "Copyright © 2024 Tightknit, Inc.",
   },
   sidebar: {
     toggleButton: true,

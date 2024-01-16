@@ -1,0 +1,47 @@
+import { FileTree } from "nextra/components";
+
+# Navigation
+
+The pages within your Tightknit site are organized as follows:
+
+<FileTree>
+  <FileTree.Folder name="pages" defaultOpen>
+    <FileTree.File name="/" />
+    <FileTree.Folder name="/members">
+      <FileTree.File name="/leaderboard" />
+      <FileTree.File name="/directory" />
+    </FileTree.Folder>
+    <FileTree.Folder name="/x/<feed-slug>" defaultOpen>
+      <FileTree.File name="/<post-id>/<post-slug>" />
+    </FileTree.Folder>
+    <FileTree.Folder name="/user" defaultOpen>
+      <FileTree.File name="/<tightknit-user-id>" />
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>
+
+## Navbar Header
+
+The navbar header will contain your community logo and name, and the call-to-action button.
+
+![Community navbar header](/tightknit-site/navbar.png)
+
+### Call to Action Button
+
+![Community Call to Action butto](/tightknit-site/CTAButton.png)
+
+The Call to Action button is featured not just in the navbar but across the website experience, especially in places where interactivity is not allowed unless the user joins the Slack workspace.
+
+The Call to Action button is typically a link to join your Slack community. See how to configure it [here](../slack-administration/site-settings#site-settings).
+
+## Sidebar
+
+The navigation sidebar contains links to all [feeds](./feed), except unlisted feeds, as well as the following items:
+
+- [Home](./home)
+- [Members](./leaderboard-and-directory)
+- [Trending](./trending)
+
+The feed items will display the emoji icon using the [Noto Emoji Google font](https://fonts.google.com/noto/specimen/Noto+Emoji), if any is configured for the feed ([instructions](../slack-administration/feed-settings.mdx#edit-feed)), or falls back to a default icon.
+
+![Community sidebar](/tightknit-site/sidebar.png)

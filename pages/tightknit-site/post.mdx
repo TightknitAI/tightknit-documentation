@@ -3,7 +3,7 @@ import { Callout } from "nextra/components";
 # Post
 
 The **Post detail page** displays a post and comments from a community feed.
-Posts are sourced from messages in Slack and are updated automatically [when the original message changes](../basics/how-items-sync.mdx).
+Posts are sourced from messages in Slack and are updated automatically [when the original message changes](../basics/how-items-sync).
 
 Post detail pages are found at the URL path `/x/<feed-slug>/<post-id>/<post-slug>`.
 Users will be redirected to this canonical url if the post slug in the URL is omitted or incorrect.
@@ -19,25 +19,25 @@ The Post detail page generally includes:
 
 ## Display Settings
 
-The post detail display type is determined by the ["Post Detail Display" setting in the admin feed settings](../slack-administration/feed-settings.mdx).
+The post detail display type is determined by the ["Post Detail Display" setting in the admin feed settings](../slack-administration/feed-settings).
 
 ### Discussion
 
 The Discussion display is best suited for chats, FAQs, and traditional forum posts.
 
-![Post detail page - Discussion](/web-community/post-detail-display-discussion.png)
+![Post detail page - Discussion](/tightknit-site/post-detail-display-discussion.png)
 
 ### Blog
 
 The Blog display is best suited for blog posts, where the cover image should take front and center. The cover image is the first image file attachment on the associated Slack message, if any, and is not included in the attachments section if there are additional files.
 
-![Post detail page - Blog](/web-community/post-detail-display-blog.png)
+![Post detail page - Blog](/tightknit-site/post-detail-display-blog.png)
 
 #### Related Posts
 
 Related posts are displayed in a section at the bottom of the page.
 
-![Related Posts - Blog](/web-community/post-detail-related-blog.png)
+![Related Posts - Blog](/tightknit-site/post-detail-related-blog.png)
 
 <Callout>
   Related posts is currently in BETA. Please reach out to
