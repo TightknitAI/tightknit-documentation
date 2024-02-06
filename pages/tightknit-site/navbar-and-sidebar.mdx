@@ -1,4 +1,4 @@
-import { FileTree } from "nextra/components";
+import { FileTree, Callout } from "nextra/components";
 
 # Navigation
 
@@ -42,5 +42,12 @@ The navigation sidebar contains links to all [feeds](./feed), except unlisted fe
 - [Members](./leaderboard-and-directory)
 
 The feed items will display the emoji icon using the [Noto Emoji Google font](https://fonts.google.com/noto/specimen/Noto+Emoji), if any is configured for the feed ([instructions](../slack-administration/feed-settings.mdx#edit-feed)), or falls back to a default icon.
+
+<Callout type="warning" emoji="⚠️">
+  The Noto Emoji Google font has limited support across browsers. It is a good
+  idea to check your choice of emoji in the [Noto Emoji Type
+  tester](https://fonts.google.com/noto/specimen/Noto+Emoji/tester) within the
+  major browsers.
+</Callout>
 
 ![Community sidebar](/tightknit-site/sidebar.png)
