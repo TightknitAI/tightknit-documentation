@@ -1,17 +1,39 @@
 import { Callout } from "nextra/components";
 
-# Feed Settings
+# Channel & Feed Settings
 
-[Feeds](../tightknit-site/feed) are the backbone of all community posts.
-Each feed correlates with a channel to control how and when messages are posted to the feed. Feeds can be created, edited, and unlisted from the app settings. You can find these settings in your Tightknit Slack Application under the `Feeds` section.
+To give the app permissions to add features to your Slack channel, you must first **enable the channel for Tightknit**. This will unlock community management features for the channel, as well as allow you to connect a **Feed**.
 
-![Tightknit Feed Settings Section](/slack-administration/feed-settings.png)
+**[Feeds](../tightknit-site/feed)** are the backbone of all posts in your companion site.
+Each feed is configured to monitor your Slack channel channel to control when and how messages are posted to the site. Feeds can be created, edited, and unlisted from the app settings. You can find these settings in your Tightknit Slack Application under the `Channels & Feeds` section.
+
+![Tightknit Feed Settings Section](/slack-administration/channel-and-feed-settings.png)
+
+## Enable a Channel for Tightknit
+
+To enable one of your Slack channels to work with Tightknit, click the `Enable Channel for Tightknit` button within the Channels & Feeds settings section.
+
+![Enable Channel button](/slack-administration/enable-channel-button.png)
+
+<Callout type="info">
+  The Tightknit app must be within the Slack channel to sync posts to the feed.
+  You must add the app to private channels. You can do this either by tagging it
+  in a message with an @mention, or through channel settings:
+  <br /> 1. Open the Slack channel <br /> 2. Click on the channel name at the top
+  of the page to open the channel details <br /> 3. Click on the `Integrations` tab
+  <br /> 4. In the Apps section, click `Add apps` <br /> 5. Add the Tightknit
+  app
+</Callout>
+
+Once you have enabled a channel, it will appear under the `Channels & Feeds` section. At the end of the row will be an overflow menu button `•••` with three dots, used to access the channel and feed settings:
+
+![Channel row](/slack-administration/channel-row.png)
 
 ## Create a new Feed
 
-To create a new feed, click the `Create Feed` button within the Feeds section.
+To create a Tightknit feed that is connected to an enabled Slack channel, click the `Create Tightknit Feed` option within the row-level menu of the channel settings.
 
-![Create a new Feed Button](/slack-administration/feed-create-button.png)
+![Create a new Feed](/slack-administration/channel-overflow-menu.png)
 
 This will open a modal where you can enter the details of your new feed.
 Here you will need to choose:
@@ -54,15 +76,13 @@ Once you have entered the details of your new feed, click the `Create` button to
 
 ## Update an existing Feed
 
-To update an existing feed, open the Feed Settings Menu on the feed row you wish to update.
-
-![Feed Settings Menu](/slack-administration/feed-settings-menu.png)
-
 ### Edit Feed
 
-To edit an existing feed, click the `Edit` option within the Feeds Edit Menu.
+To edit an existing feed, click the `Edit Feed settings` option within the row-level menu.
 
-In the new modal, you'll be able to edit the same values as the [feed creation settings](#create-a-new-feed).
+![Edit feed](/slack-administration/feed-overflow-menu.png)
+
+In the Update Feed modal, you'll be able to edit the same values as the [feed creation settings](#create-a-new-feed).
 
 <Callout type="warning" emoji="⚠️">
   Updating a feed's slug will change the URL of the feed. This will break any
@@ -73,6 +93,6 @@ In the new modal, you'll be able to edit the same values as the [feed creation s
 
 ### Sync Channel Info
 
-The Feed detail page features the corresponding Slack channel's topic, description, and other metadata. This information is typically synced automatically to the site. However, if you find the site has not been updated, you can trigger a sync manually by clicking the `🔄 Sync channel info` option within the Feeds Edit Menu.
+The [Feed detail page](../tightknit-site/feed) features the corresponding Slack channel's topic, description, and other metadata. This information is typically synced to the site automatically. However, if you find the site has not been updated, you can trigger a sync manually by clicking the `🔄 Sync channel info` option within the row-level menu.
 
 This action is will only sync channel metadata and not any of the Slack messages.
