@@ -29,40 +29,14 @@ Within the Site Details modal, you can configure the following:
 
 ![Tightknit Site Details Modal](/slack-administration/community-details-modal.png)
 
-## Site Settings
+## Call to Action Button
 
-Within the Site Settings modal, you can configure the following:
+Within the Call to Action Button settings modal, you can configure the following:
 
 - **Call-to-Action Text** - This is the text that is present on the Slack button [across the Tightknit site experience](../tightknit-site/navbar-and-sidebar.mdx#call-to-action-button). If you do not wish to show this button, leave this field empty.
 - **Call-to-Action URL** - This is the URL that the Slack button will link to when clicked. By default, it is the `/join` page of your community. We strongly recommend you keep this setting, since the `/join` URL will automatically redirect to your [Slack invite link](#slack-invite-link) and capture useful metrics.
 
-![Tightknit Site Settings Modal](/slack-administration/site-settings-modal.png)
-
-## Slack Invite Link
-
-Within the Slack Invite Link modal, you can register your Slack workspace's shared invitation link with Tightknit. You can find your invite link [here](https://slack.com/help/articles/201330256-Invite-new-members-to-your-workspace#share-an-invitation-link).
-
-Once you've registered your invite link with Tightknit, we recommend _never_ directly using that link anymore and instead using the `/join` URL of your Tightknit site. Why? Our URL will never change, and as it sends users to your Slack invite link, we'll keep track of who uses it to join your workspace!
-
-<Callout type="info">
-  Each admin user in the workspace can generate their own unique shared invite
-  link. You can register any of those links with Tightknit.
-</Callout>
-
-<Callout type="warning" emoji="⚠️">
-  A Slack invitation link expires after it is used for 400 successful sign-ups.
-  You must then [generate a new link](#generate-a-new-invite-link) and register
-  it again with Tightknit. Don't worry - we'll remind you when you're nearing
-  the limit!
-</Callout>
-
-![Tightknit Community Slack Link Modal](/slack-administration/slack-invite-link-modal.png)
-
-### Generate a new invite link
-
-Is your link expired or expiring? Go into your Slack workspace admin settings. Select the "Invitations" page under the administration menu, i.e. the URL is at `/admin/invites`. Click on the "Invite Links" tab. Find the user whose link was registered with Tightknit and click "Deactivate".
-
-Now simply [repeat the process to generate an invite link](https://slack.com/help/articles/201330256-Invite-new-members-to-your-workspace#share-an-invitation-link). Don't forget to register again it with Tightknit!
+![Tightknit Site Settings Modal](/slack-administration/site-call-to-action-button-modal.png)
 
 ## Home Page
 
