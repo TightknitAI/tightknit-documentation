@@ -1,8 +1,8 @@
 {
   "navbar-and-sidebar": "Navigation",
   "home": "Home",
-  "leaderboard-and-directory": "Leaderboard & Directory",
-  "feed": "Feed",
-  "post": "Post",
-  "profile": "Profile"
+  "leaderboard-and-directory": "Leaderboard & Directory pages",
+  "feed": "Feed page",
+  "post": "Post page",
+  "profile": "Profile page"
 }

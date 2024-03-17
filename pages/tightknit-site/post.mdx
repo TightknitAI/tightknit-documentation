@@ -1,25 +1,25 @@
 import { Callout } from "nextra/components";
 
-# Post
+# Post Page
 
 The **Post detail page** displays a post and comments from a community Feed.
 Posts are sourced from messages in Slack and are updated automatically [when the original message changes](../basics/how-items-sync).
 
 Post detail pages are found at the URL path `/x/<feed-slug>/<post-id>/<post-slug>`.
-Users will be redirected to this canonical url if the post slug in the URL is omitted or incorrect.
+Users will be redirected to this canonical URL if the post slug in the URL is omitted or incorrect.
 
 The Post detail page generally includes:
 
-- an auto-generated title
-- the author
-- the posted date (respects the original Slack message send date)
-- a permalink back to the original Slack message
-- emoji reactions from the original Slack message
-- all synced comments on the post, with the above info on each comment
+- An auto-generated title
+- The author
+- The posted date (respects the original Slack message send date)
+- A permalink back to the original Slack message
+- Emoji reactions from the original Slack message
+- All synced comments on the post, with the above info on each comment
 
 ## Display Settings
 
-The post detail display type is determined by the ["Post Detail Display" setting in the admin Feed settings](../slack-administration/channel-and-feed-settings).
+The **post detail display type** is determined by the ["Post Detail Display" setting in the admin Feed settings](../slack-administration/channel-and-feed-settings).
 
 ### Discussion
 
@@ -40,7 +40,7 @@ Related posts are displayed in a section at the bottom of the page.
 ![Related Posts - Blog](/tightknit-site/post-detail-related-blog.png)
 
 <Callout>
-  Related posts is currently in BETA. Please reach out to
+  Related posts is currently in beta. Please reach out to
   [Support](mailto:support@tightknit.ai) if you are interested in this feature.
 </Callout>
 
