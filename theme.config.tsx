@@ -7,7 +7,7 @@ const config: DocsThemeConfig = {
     <>
       <Image
         src={"/TightknitNameLogo.png"}
-        alt="Tighknit Logo"
+        alt="Tightknit Logo"
         width={145}
         height={40}
       />
@@ -25,7 +25,7 @@ const config: DocsThemeConfig = {
       <title>Tightknit Docs</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:title" content="Tightknit Docs" />
-      <meta property="og:description" content="Tighknit documentation" />
+      <meta property="og:description" content="Tightknit documentation" />
       <link rel="icon" href="https://i.imgur.com/tJIWbqD.png"></link>
     </>
   ),
@@ -33,7 +33,7 @@ const config: DocsThemeConfig = {
     // component: (
     //   <Image
     //     src={"/TightknitNameLogo.webp"}
-    //     alt="Tighknit Logo"
+    //     alt="Tightknit Logo"
     //     width={145}
     //     height={40}
     //   />

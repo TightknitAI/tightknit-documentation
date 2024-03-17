@@ -1,24 +1,24 @@
 import { Steps } from "nextra/components";
 
-# Feed
+# Feed Page
 
-The **Feed detail page** displays the sorted posts within that feed. They are connected to your Slack channels.
+The **Feed detail page** displays the sorted posts within that Feed. They are connected to your Slack channels.
 
 ## Overview
 
 Feed pages are found at the URL path `/x/<feed-slug>`.
 
-![Community feed page](/tightknit-site/feed.png)
+![Community Feed page](/tightknit-site/feed.png)
 
 ### Unlisted Feeds
 
-Unlisted feeds are only accessible by directly visiting the URL. They are excluded from sidebar links and SEO.
+Unlisted Feeds are only accessible by directly visiting the URL. They are excluded from sidebar links and SEO.
 
-Posts from unlisted feeds will not appear in any other feeds, such as on the Home page or Profile page.
+Posts from unlisted Feeds will not appear in any other Feeds, such as on the Home page or Profile page.
 
 ## "About" & "Topic" Section
 
-Describes the purpose and topic of your feed. This section is linked to the `Description` and `Topic`, respectively, of your Slack channels
+Describes the purpose and topic of your Feed. This section is linked to the `Description` and `Topic`, respectively, of your Slack channels
 and will be updated automatically [when the channel is updated](../basics/how-items-sync).
 
 ![About section](/tightknit-site/about-section.png)
@@ -27,23 +27,23 @@ If either of these sections are empty, they are not shown on the page.
 
 ## Sorting
 
-Use the feed sort select menu to choose the order the feed posts are displayed.
+Use the Feed sort select menu to choose the order the Feed posts are displayed.
 
 ![Feed sort](/tightknit-site/sorting.png)
 
-Depending on the feed type, you may see the following options:
+Depending on the Feed type, you may see the following options:
 
-- **Most Recent Activity** - the posts with the most recent comments are highest
-- **Newest** - the posts created most recently are highest
-- **Oldest** - the oldest posts are highest
+- **Most Recent Activity** - the posts with the most recent comments are displayed first
+- **Newest** - the posts created most recently are displayed first
+- **Oldest** - the oldest posts are displayed first
 
-User sorting preferences are remembered on a per feed basis.
+User sorting preferences are remembered on a per-Feed basis.
 
 ## Display Settings
 
-The default list view display setting is determined by the ["List View Display" setting in the admin feed settings](../slack-administration/channel-and-feed-settings).
+The **default list view display setting** is determined by the ["List View Display" setting in the admin Feed settings](../slack-administration/channel-and-feed-settings).
 
-Users can also use the feed post display select menu to choose the format in which feed posts are displayed. User display setting preferences are remembered on a per feed basis.
+Users can also use the Feed post display select menu to choose the format in which Feed posts are displayed. User display setting preferences are remembered on a per-Feed basis.
 
 ### Snippet
 
@@ -69,7 +69,7 @@ Click the `Share` button to bring up the Share modal.
 
 ![Share button](/tightknit-site/share-button.png)
 
-Share the current feed to your favorite socials, and let the world know about this awesome feed! 😎
+Share the current Feed to your favorite socials, and let the world know about your latest activity! 😎
 
 ![Share modal](/tightknit-site/share-modal.png)
 
@@ -79,7 +79,7 @@ Click the `Follow` button to bring up the RSS modal.
 
 ![Follow button](/tightknit-site/follow-button.png)
 
-Use your favorite RSS reader to keep up-to-date with the latest posts in the feed.
+Use your favorite RSS reader to keep up-to-date with the latest posts in the Feed.
 
 ![RSS modal](/tightknit-site/rss-modal.png)
 
@@ -98,8 +98,8 @@ where the RSS link is replaced with the link shown in the Tightknit RSS modal.
 
 ### Subscribe
 
-Once the command is entered, your slack channel will
-now be notified every time there is a new post made in the Tightknit feed.
+Once the command is entered, your Slack channel will
+now be notified every time there is a new post made in the Tightknit Feed.
 
 ![RSS Slack received](/tightknit-site/rss-slack2.png)
 
@@ -109,6 +109,6 @@ Slack is feeding into Tightknit feeding into Slack! 🤯
 
 ## Embed (Beta)
 
-Click the `Embed` tab within the Share/Follow modal to get the iframe code you can put in another website and embed the Tightknit feed. The Embed Preview shows an example of what the iframe would look like with the provided parameters.
+Click the `Embed` tab within the Share/Follow modal to get the iframe code you can put in another website and embed the Tightknit Feed. The Embed Preview shows an example of what the iframe would look like with the provided parameters.
 
-![Embed feed](/tightknit-site/embed-tab-feed.png)
+![Embed Feed](/tightknit-site/embed-tab-feed.png)

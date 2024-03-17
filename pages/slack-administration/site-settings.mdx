@@ -1,24 +1,24 @@
 import { Callout, Steps } from "nextra/components";
 
-# Tightknit Site Settings
+# Tightknit Companion Site Settings
 
 These settings allow you to configure your community branding and how Tightknit interacts across your entire workspace.
-You can find these settings in your Tightknit Slack Application under the `Tightknit Site` section.
+You can find these settings in your Tightknit Slack app under the `Tightknit Companion Site` section.
 
-![Tightknit Site Settings Section](/slack-administration/site-settings.png)
+![Tightknit Companion Site Settings Section](/slack-administration/site-settings.png)
 
-By default, the site logo will be the same as your Slack workspace icon. If you require a different logo, please contact [support](mailto:support@tightknit.ai).
+By default, the site logo will be the same as your Slack workspace icon. If you require a different logo, please contact [Support](mailto:support@tightknit.ai).
 
 ## Site Details
 
 Within the Site Details modal, you can configure the following:
 
 - **Community Name** - This is the name of your community.
-  This will be used as the title of your Tightknit site as well as the title within SEO metadata.
+  This will be used as the title of your Tightknit companion site as well as the title within SEO metadata.
 - **Site Slug** - This is the subdomain that will be used when you host your community on `tightknit.community`.
   <Callout type="info" emoji="ℹ️">
     If you're interested in using a custom domain, please reach out to
-    [support](mailto:support@tightknit.ai) or ask for help within the Slack
+    [Support](mailto:support@tightknit.ai) or ask for help within the Slack
     community.
   </Callout>
   <Callout type="warning" emoji="⚠️">
@@ -27,16 +27,16 @@ Within the Site Details modal, you can configure the following:
     been shared.
   </Callout>
 
-![Tightknit Site Details Modal](/slack-administration/community-details-modal.png)
+![Tightknit Companion Site Details Modal](/slack-administration/community-details-modal.png)
 
-## Call to Action Button
+## Call-to-Action Button
 
-Within the Call to Action Button settings modal, you can configure the following:
+Within the Call-to-action Button settings modal, you can configure the following:
 
-- **Call-to-Action Text** - This is the text that is present on the Slack button [across the Tightknit site experience](../tightknit-site/navbar-and-sidebar.mdx#call-to-action-button). If you do not wish to show this button, leave this field empty.
+- **Call-to-Action Text** - This is the text that is present on the Slack button [across the Tightknit companion site experience](../tightknit-site/navbar-and-sidebar.mdx#call-to-action-button). If you do not wish to show this button, leave this field empty.
 - **Call-to-Action URL** - This is the URL that the Slack button will link to when clicked. By default, it is the `/join` page of your community. We strongly recommend you keep this setting, since the `/join` URL will automatically redirect to your [Slack invite link](#slack-invite-link) and capture useful metrics.
 
-![Tightknit Site Settings Modal](/slack-administration/site-call-to-action-button-modal.png)
+![Tightknit Companion Site Settings Modal](/slack-administration/site-call-to-action-button-modal.png)
 
 ## Home Page
 
@@ -45,7 +45,7 @@ Within the Home Page modal, you can configure the experience of the [Home page](
 - **Community Description** - This is the subtitle underneath the community name.
 - **Banner Image** - The image banner at the top of the Home page. For the best results, please use an image with dimensions of at least 827 x 192. Very tall images may be clipped.
 
-![Tightknit Site Home Page Modal](/slack-administration/home-page-modal.png)
+![Tightknit Companion Site Home Page Modal](/slack-administration/home-page-modal.png)
 
 ## Integrations
 
@@ -53,7 +53,7 @@ Within the Integrations modal, you can configure Google Tag Manager.
 
 Google Tag Manager is a free tool that allows you to manage and deploy marketing tags (snippets of code or tracking pixels) on your website without having to modify the code.
 
-### How to setup Google Tag Manager
+### How to set up Google Tag Manager
 
 <Steps>
 ### Create a Google Tag Manager account and container
@@ -61,24 +61,24 @@ Google Tag Manager is a free tool that allows you to manage and deploy marketing
 Visit [Google Tag Manager](https://tagmanager.google.com/) and create an account for your company.
 
 1. Click the Admin tab
-2. Click the + button next to the Container section.
+2. Click the + button next to the Container section
 3. Copy the Google Tag Manager ID (GTM-XXXXXX)
-4. Paste it into the Tightknit Integrations modal within Slack.
+4. Paste it into the Tightknit Integrations modal within Slack
 
-![Tightknit Site Integrations Modal](/slack-administration/site-integrations-modal.png)
+![Tightknit Companion Site Integrations Modal](/slack-administration/site-integrations-modal.png)
 
 ### [Optional] Connect a Google Analytics Property
 
 Visit [Google Analytics](https://analytics.google.com/analytics/web/).
 
-For each website you own, you can create a “Property”.
+For each website you own, you can create a “Property.”
 To create a property, follow these steps:
 
 1. Click the `⚙ Admin` Button in the bottom left corner
 2. Click the `+Create` button and select Property
 3. Copy the Measurement ID (G-XXXXXXXXXX)
 
-Now we'll return back to [Google Tag Manager](https://tagmanager.google.com/) to add the Google Analytics Property to our container.
+Now, we'll return back to [Google Tag Manager](https://tagmanager.google.com/) to add the Google Analytics Property to our container.
 To create a new Tag, follow these steps:
 
 1. Under Workspace, navigate to Tags on the left hand navigation

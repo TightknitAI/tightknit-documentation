@@ -3,7 +3,7 @@ import { Callout, Steps } from "nextra/components";
 # Community Settings
 
 These settings allow you to configure your Tightknit app and how it interacts across your entire Slack workspace.
-You can find these settings in your Tightknit Slack Application under the `Community` section.
+You can find these settings in your Tightknit Slack app under the `Community` section.
 
 ![Tightknit Community Settings Section](/slack-administration/community-settings.png)
 
@@ -12,17 +12,17 @@ You can find these settings in your Tightknit Slack Application under the `Commu
 Within the Community Details modal, you can configure the following:
 
 - **Community Name** - This is the name of your community.
-  This will be used as the title of your Tightknit site, as well as the title within SEO metadata. It also used as the name of the Tightknit app bot when it responds to Slack messages.
+  This will be used as the title of your Tightknit companion site, as well as the title within SEO metadata. It's also used as the name of the Tightknit app bot when it responds to Slack messages.
 - **Site Slug** - This is the subdomain that will be used when you host your community on `tightknit.community`.
   <Callout type="info" emoji="ℹ️">
     If you're interested in using a custom domain, please reach out to
-    [support](mailto:support@tightknit.ai) or ask for help within the Slack
+    [Support](mailto:support@tightknit.ai) or ask for help within the Slack
     community.
   </Callout>
   <Callout type="warning" emoji="⚠️">
-    If not on a custom domain, updating a sites's slug will change the URL of
-    all community pages that use this slug. This will break any bookmarks and
-    links that have been shared.
+    If not on a custom domain, updating a site's slug will change the URL of all
+    community pages that use this slug. This will break any bookmarks and links
+    that have been shared.
   </Callout>
 
 ![Tightknit Community Details Modal](/slack-administration/community-details-modal.png)
@@ -31,7 +31,7 @@ Within the Community Details modal, you can configure the following:
 
 Within the Slack Invite Link modal, you can register your Slack workspace's shared invitation link with Tightknit. You can find your invite link [here](https://slack.com/help/articles/201330256-Invite-new-members-to-your-workspace#share-an-invitation-link).
 
-Once you've registered your invite link with Tightknit, we recommend _never_ directly using that link anymore and instead using the `/join` URL of your Tightknit site. Why? Our URL will never change, and as it sends users to your Slack invite link, we'll keep track of who uses it to join your workspace!
+Once you've registered your invite link with Tightknit, we recommend _never_ directly using that link anymore and instead using the `/join` URL of your Tightknit companion site. Why? Our URL will never change, and as it sends users to your Slack invite link, we'll keep track of who uses it to join your workspace!
 
 <Callout type="info">
   Each admin user in the workspace can generate their own unique shared invite
@@ -41,7 +41,7 @@ Once you've registered your invite link with Tightknit, we recommend _never_ dir
 <Callout type="warning" emoji="⚠️">
   A Slack invitation link expires after it is used for 400 successful sign-ups.
   You must then [generate a new link](#generate-a-new-invite-link) and register
-  it again with Tightknit. Don't worry - we'll remind you when you're nearing
+  it again with Tightknit. Don't worry — we'll remind you when you're nearing
   the limit!
 </Callout>
 
@@ -49,15 +49,15 @@ Once you've registered your invite link with Tightknit, we recommend _never_ dir
 
 ### Generate a new invite link
 
-Is your link expired or expiring? Go into your Slack workspace admin settings. Select the "Invitations" page under the administration menu, i.e. the URL is at `/admin/invites`. Click on the "Invite Links" tab. Find the user whose link was registered with Tightknit and click "Deactivate".
+Is your link expired or expiring? Go into your Slack workspace admin settings. Select the "Invitations" page under the administration menu, i.e., the URL is at `/admin/invites`. Click on the "Invite Links" tab. Find the user whose link was registered with Tightknit and click "Deactivate."
 
-Now simply [repeat the process to generate an invite link](https://slack.com/help/articles/201330256-Invite-new-members-to-your-workspace#share-an-invitation-link). Don't forget to register again it with Tightknit!
+Now, simply [repeat the process to generate an invite link](https://slack.com/help/articles/201330256-Invite-new-members-to-your-workspace#share-an-invitation-link). Don't forget to register again it with Tightknit!
 
 ## Tightknit Hub Channel
 
 When you first set up your Tightknit community, we will create a private channel that will serve as your Tightknit notifications hub. We will send important analytics, updates, and alerts about your community here. This is a private channel that should only include select admins.
 
-By default the channel is named **`tightknit-hub`**, but you are free to rename it to anything you like!
+By default, the channel is named **`tightknit-hub`**, but you are free to rename it to anything you like!
 
 ## New Member Onboarding
 
@@ -67,6 +67,6 @@ Within the New Member Onboarding modal, you can configure the following:
 
 ![New Member Onboarding modal](/slack-administration/new-member-notification.png)
 
-- **Welcome Message** - When new users join your workspace, Tightknit can send them a customized welcome message introducing them to your community’s guidelines, your workspace’s most important channels, or general tips for getting started. Not sure what your message will look like? Try it out safely, and send a test message to yourself!
+- **Welcome Message** - When new users join your workspace, Tightknit can send them a customized welcome message introducing them to your community's guidelines, your workspace's most important channels, or general tips for getting started. Not sure what your message will look like? Try it out safely, and send a test message to yourself!
 
 ![New Member Onboarding modal](/slack-administration/new-member-onboarding-modal.png)
