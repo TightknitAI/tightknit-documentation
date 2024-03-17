@@ -1,13 +1,13 @@
 # Create a Post or Comment
 
-Creating new content in your Tightknit site is as simple as sending messages in Slack!
+Creating new content in your Tightknit companion site is as simple as sending messages in Slack!
 
 ## Posts
 
-Once a Slack channel has been connected to a Tightknit feed, all new messages sent within that channel
-are synced to the Tightknit site as **[Posts](../../tightknit-site/post)**.
+Once a Slack channel has been connected to a Tightknit Feed, all new messages sent within that channel
+are synced to the Tightknit companion site as **[Posts](../../tightknit-site/post)**.
 
-The Tightknit bot will respond with a notification that your post is now synced and link to the post in the Tightknit site. _This feature can be disabled in [Feed settings](../../slack-administration/channel-and-feed-settings)_.
+The Tightknit bot will respond with a notification that your post is now synced and link to the post in the Tightknit companion site. _This feature can be disabled in [Feed settings](../../slack-administration/channel-and-feed-settings)_.
 
 import { Callout } from "nextra/components";
 
@@ -20,7 +20,7 @@ import { Callout } from "nextra/components";
 
 ![New community post](/new-post.png)
 
-The Tightknit site post will respect the posted date of the original Slack message. All posts contain a permalink back to the original Slack message.
+The Tightknit companion site post will respect the posted date of the original Slack message. All posts contain a permalink back to the original Slack message.
 
 ### Title & Slug
 
@@ -29,28 +29,28 @@ If you prefer a different title or slug, [you can edit it using the message shor
 
 ## Comments
 
-Any replies on a synced Slack message are synced to the Tightknit site as **Comments** on the Post.
+Any replies on a synced Slack message are synced to the Tightknit companion site as **Comments** on the Post.
 
 ![New Slack reply](/new-slack-reply.png)
 
 ![New community comment](/new-comment.png)
 
-The Tightknit site comment will respect the posted date of the original Slack message. All comments contain a permalink back to the original Slack message.
+The Tightknit companion site comment will respect the posted date of the original Slack message. All comments contain a permalink back to the original Slack message.
 
 <Callout>
-  Tightknit treats all top-level Slack messages as posts in the Tightknit site
-  and all replies as comments. When responding to someone in a Slack channel, it
-  is recommended to always reply in the message thread. Otherwise, consecutive
-  top-level messages will each create distinct posts in the Tightknit site
-  without context of each other.
+  Tightknit treats all top-level Slack messages as posts in the Tightknit
+  companion site and all replies as comments. When responding to someone in a
+  Slack channel, it is recommended to always reply in the message thread.
+  Otherwise, consecutive top-level messages will each create distinct posts in
+  the Tightknit companion site without context of each other.
 </Callout>
 
-## Message Shortcut - Sync a Message to the Tightknit site
+## Message Shortcut - Sync a Message to the Tightknit companion site
 
-Let's say you have a Slack message that is not synced to the Tightknit site. Perhaps it is a message sent prior
-to your Tightknit installation date; or it was previously synced but a user removed it from the Tightknit site using the message shortcut.
+Let's say you have a Slack message that is not synced to the Tightknit companion site. Perhaps it is a message sent prior
+to your Tightknit installation date; or it was previously synced but a user removed it from the Tightknit companion site using the message shortcut.
 
-You can simply re-sync it to the Tightknit site using the Tightknit [message shortcut](../message-shortcuts).
+You can simply re-sync it to the Tightknit companion site using the Tightknit [message shortcut](../message-shortcuts).
 
 <Callout>
   Using the message shortcut will sync the entire message thread at once,
@@ -60,16 +60,16 @@ You can simply re-sync it to the Tightknit site using the Tightknit [message sho
 
 ## @Mentions and Tags
 
-Tightknit will convert most @mention and tags within the body of a message to the equivalent name and link within the Tightknit site.
+Tightknit will convert most @mention and tags within the body of a message to the equivalent name and link within the Tightknit companion site.
 
 | **Slack @mention**                   | **Tightknit display text**                                                                                                                                                 | **Tightknit link** |
 | :----------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
 | @User                                | By default, uses the Slack profile full name. Please contact [support](mailto:support@tightknit.ai) if you need a different name display style.                            | User profile page  |
-| #Channel                             | • If channel has connected feed: feed name<br/>• If no connected feed: channel name (text only, no link)<br/>• If private channel: `🔒[private feed]` (text only, no link) | Feed page          |
+| #Channel                             | • If channel has connected Feed: Feed name<br/>• If no connected Feed: channel name (text only, no link)<br/>• If private channel: `🔒[private feed]` (text only, no link) | Feed page          |
 | @User group                          | Name of group (text only, no link)                                                                                                                                         |                    |
 | @here,<br/> @channel,<br/> @everyone | Text only, no link                                                                                                                                                         |                    |
 
-User and Channel tags in Tightknit site content will be dynamically updated if the associated name changes in Slack.
+User and Channel tags in Tightknit companion site content will be dynamically updated if the associated name changes in Slack.
 
 |                   Slack Message                   |                      Tightknit Post                       |
 | :-----------------------------------------------: | :-------------------------------------------------------: |
@@ -77,13 +77,13 @@ User and Channel tags in Tightknit site content will be dynamically updated if t
 
 ## Messages from Bot Users
 
-Posts and comments by bot users will only be synced to the Tightknit site if the bot user has been [configured to allow posting in the feed](../../slack-administration/manage-feed).
+Posts and comments by bot users will only be synced to the Tightknit companion site if the bot user has been [configured to allow posting in the Feed](../../slack-administration/manage-feed).
 
 <Callout type="warning" emoji="⚠️">
   **Known Limitation**: Slack bots that send _only_ Block Kit UI for their
   messages are not support. Tightknit will only sync the `text` of a slack
-  message. If you are seeing issues with bot messages in you Tightknit site,
-  please contact [support](mailto:support@tightknit.ai).
+  message. If you are seeing issues with bot messages in you Tightknit companion
+  site, please contact [support](mailto:support@tightknit.ai).
 </Callout>
 
 ## Limitations

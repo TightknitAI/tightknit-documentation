@@ -5,7 +5,7 @@ import { Callout } from "nextra/components";
 To give the app permissions to add features to your Slack channel, you must first **enable the channel for Tightknit**. This will unlock community management features for the channel, as well as allow you to connect a **Feed**.
 
 **[Feeds](../tightknit-site/feed)** are the backbone of all posts in your companion site.
-Each feed is configured to monitor your Slack channel channel to control when and how messages are posted to the site. Feeds can be created, edited, and unlisted from the app settings. You can find these settings in your Tightknit Slack Application under the `Channels & Feeds` section.
+Each Feed is configured to monitor your Slack channel channel to control when and how messages are posted to the site. Feeds can be created, edited, and unlisted from the app settings. You can find these settings in your Tightknit Slack app under the `Channels & Feeds` section.
 
 ![Tightknit Feed Settings Section](/slack-administration/channel-and-feed-settings.png)
 
@@ -16,7 +16,7 @@ To enable one of your Slack channels to work with Tightknit, click the `Enable C
 ![Enable Channel button](/slack-administration/enable-channel-button.png)
 
 <Callout type="info">
-  The Tightknit app must be within the Slack channel to sync posts to the feed.
+  The Tightknit app must be within the Slack channel to sync posts to the Feed.
   You must add the app to private channels. You can do this either by tagging it
   in a message with an @mention, or through channel settings:
   <br /> 1. Open the Slack channel <br /> 2. Click on the channel name at the top
@@ -25,27 +25,27 @@ To enable one of your Slack channels to work with Tightknit, click the `Enable C
   app
 </Callout>
 
-Once you have enabled a channel, it will appear under the `Channels & Feeds` section. At the end of the row will be an overflow menu button `•••` with three dots, used to access the channel and feed settings:
+Once you have enabled a channel, it will appear under the `Channels & Feeds` section. At the end of the row will be an overflow menu button `•••` with three dots, used to access the channel and Feed settings:
 
 ![Channel row](/slack-administration/channel-row.png)
 
 ## Create a new Feed
 
-To create a Tightknit feed that is connected to an enabled Slack channel, click the `Create Tightknit Feed` option within the row-level menu of the channel settings.
+To create a Tightknit Feed that is connected to an enabled Slack channel, click the `Create Tightknit Feed` option within the row-level menu of the channel settings.
 
 ![Create a new Feed](/slack-administration/channel-overflow-menu.png)
 
-This will open a modal where you can enter the details of your new feed.
+This will open a modal where you can enter the details of your new Feed.
 Here you will need to choose:
 
-- **Selected Channel** - The channel that this feed will listen to for new messages.
-- **Feed Name** - The name of the feed. This will be used to identify the feed in the Feeds section on the Tightknit site.
-- **Feed Slug** - The slug of the feed. This will be used in the URL of the feed. Try to keep this short and simple and something that will change infrequently.
-- **Preset** - The Tightknit site UI display preset for the feed. This is used during feed creation to determine default values for display settings such as List View Display and Post Detail Display. The display values can be overridden in the optional settings below.
+- **Selected Channel** - The channel that this Feed will listen to for new messages.
+- **Feed Name** - The name of the Feed. This will be used to identify the Feed in the Feeds section on the Tightknit companion site.
+- **Feed Slug** - The slug of the Feed. This will be used in the URL of the Feed. Try to keep this short and simple and something that will change infrequently.
+- **Preset** - The Tightknit companion site UI display preset for the Feed. This is used during Feed creation to determine default values for display settings such as List View Display and Post Detail Display. The display values can be overridden in the optional settings below.
 
 Additional optional settings:
 
-- **Message Sync Settings** - By default, Tightknit will sync all incoming new Slack messages and replies to the feed. If you do _not_ want to auto-sync messages (e.g. you prefer to manually sync select posts using the [shortcut](../basics/message-shortcuts#tightknit-shortcuts)), uncheck this option.
+- **Message Sync Settings** - By default, Tightknit will sync all incoming new Slack messages and replies to the Feed. If you do _not_ want to auto-sync messages (e.g. you prefer to manually sync select posts using the [shortcut](../basics/message-shortcuts#tightknit-shortcuts)), uncheck this option.
 - **Tightknit Responder** - By default, the Tightknit bot will send a public reply on every synced Slack message to notify the user(s) that the thread is now synced to the companion site. You can mute the Tightknit responder to turn off this feature.
 
   <Callout type="info" emoji="ℹ️">
@@ -54,23 +54,23 @@ Additional optional settings:
     shortcut](../basics/message-shortcuts#tightknit-shortcuts).
   </Callout>
 
-- **Emoji Icon** - The emoji icon, such as 📡, that is displayed next to the feed name in the Tightknit site sidebar using the [Noto Emoji Google font](https://fonts.google.com/noto/specimen/Noto+Emoji). If none is set, the sidebar displays a default icon.
+- **Emoji Icon** - The emoji icon, such as 📡, that is displayed next to the Feed name in the Tightknit companion site sidebar using the [Noto Emoji Google font](https://fonts.google.com/noto/specimen/Noto+Emoji). If none is set, the sidebar displays a default icon.
   <Callout type="warning" emoji="⚠️">
     The Noto Emoji Google font has limited support across browsers. It is a good
     idea to check your choice of emoji in the [Noto Emoji Type
     tester](https://fonts.google.com/noto/specimen/Noto+Emoji/tester) within the
     major browsers.
   </Callout>
-- **Make feed unlisted** - Feeds that are unlisted are excluded from sidebar links and SEO, and are only accessible by directly visiting the URL.
-- **List View Display** - The default display setting for posts in the feed list view, such as Snippet, Compact, or Card. [Read More](../tightknit-site/feed.mdx#display-settings).
-- **Post Detail Display** - The default display setting for the detail page of posts in this feed, such as Discussion or Blog. [Read More](../tightknit-site/post.mdx#display-settings).
+- **Make Feed unlisted** - Feeds that are unlisted are excluded from sidebar links and SEO, and are only accessible by directly visiting the URL.
+- **List View Display** - The default display setting for posts in the Feed list view, such as Snippet, Compact, or Card. [Read More](../tightknit-site/feed.mdx#display-settings).
+- **Post Detail Display** - The default display setting for the detail page of posts in this Feed, such as Discussion or Blog. [Read More](../tightknit-site/post.mdx#display-settings).
 
-Once you have entered the details of your new feed, click the `Create` button to create the feed.
+Once you have entered the details of your new Feed, click the `Create` button to create the Feed.
 
 ![Feed Create Modal](/slack-administration/feed-create-modal.png)
 
 <Callout>
-  You can create a max of 2 feeds per Slack workspace. If you need more feeds,
+  You can create a max of 2 Feeds per Slack workspace. If you need more Feeds,
   please contact [support](mailto:support@tightknit.ai).
 </Callout>
 
@@ -78,15 +78,15 @@ Once you have entered the details of your new feed, click the `Create` button to
 
 ### Edit Feed
 
-To edit an existing feed, click the `Edit Feed settings` option within the row-level menu.
+To edit an existing Feed, click the `Edit Feed settings` option within the row-level menu.
 
-![Edit feed](/slack-administration/feed-overflow-menu.png)
+![Edit Feed](/slack-administration/feed-overflow-menu.png)
 
-In the Update Feed modal, you'll be able to edit the same values as the [feed creation settings](#create-a-new-feed).
+In the Update Feed modal, you'll be able to edit the same values as the [Feed creation settings](#create-a-new-feed).
 
 <Callout type="warning" emoji="⚠️">
-  Updating a feed's slug will change the URL of the feed. This will break any
-  links to the feed that have been shared.
+  Updating a Feed's slug will change the URL of the Feed. This will break any
+  links to the Feed that have been shared.
 </Callout>
 
 ![Edit Feed Modal](/slack-administration/feed-update-modal.png)
