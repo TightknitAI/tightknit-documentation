@@ -5,7 +5,7 @@ Creating new content in your Tightknit companion site is as simple as sending me
 ## Posts
 
 Once a Slack channel has been connected to a Tightknit Feed, all new messages sent within that channel
-are synced to the Tightknit companion site as **[Posts](../../tightknit-site/post)**.
+are synced to the Tightknit companion site as **[posts](../../tightknit-site/post)**.
 
 The Tightknit bot will respond with a notification that your post is now synced and link to the post in the Tightknit companion site. _This feature can be disabled in [Feed settings](../../slack-administration/channel-and-feed-settings)_.
 
@@ -22,14 +22,14 @@ import { Callout } from "nextra/components";
 
 The Tightknit companion site post will respect the posted date of the original Slack message. All posts contain a permalink back to the original Slack message.
 
-### Title & Slug
+### Title and Slug
 
 The post title and URL slug are automatically generated using AI.
 If you prefer a different title or slug, [you can edit it using the message shortcut](./edit-post-or-comment).
 
 ## Comments
 
-Any replies on a synced Slack message are synced to the Tightknit companion site as **Comments** on the Post.
+Any replies on a synced Slack message are synced to the Tightknit companion site as **comments** on the post.
 
 ![New Slack reply](/new-slack-reply.png)
 
@@ -45,17 +45,16 @@ The Tightknit companion site comment will respect the posted date of the origina
   the Tightknit companion site without context of each other.
 </Callout>
 
-## Message Shortcut - Sync a Message to the Tightknit companion site
+## Message Shortcut: Sync a Message to the Tightknit Companion Site
 
 Let's say you have a Slack message that is not synced to the Tightknit companion site. Perhaps it is a message sent prior
-to your Tightknit installation date; or it was previously synced but a user removed it from the Tightknit companion site using the message shortcut.
+to your Tightknit installation date, or maybe it was previously synced but a user removed it from the Tightknit companion site using the message shortcut.
 
 You can simply re-sync it to the Tightknit companion site using the Tightknit [message shortcut](../message-shortcuts).
 
 <Callout>
   Using the message shortcut will sync the entire message thread at once,
-  including the post, any of its commments, file attachments, emoji reactions,
-  etc.
+  including the post, commments, file attachments, emoji reactions, etc.
 </Callout>
 
 ## @Mentions and Tags
@@ -64,7 +63,7 @@ Tightknit will convert most @mention and tags within the body of a message to th
 
 | **Slack @mention**                   | **Tightknit display text**                                                                                                                                                 | **Tightknit link** |
 | :----------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------- |
-| @User                                | By default, uses the Slack profile full name. Please contact [support](mailto:support@tightknit.ai) if you need a different name display style.                            | User profile page  |
+| @User                                | By default, uses the Slack profile full name. Please contact [Support](mailto:support@tightknit.ai) if you need a different name display style.                            | User profile page  |
 | #Channel                             | • If channel has connected Feed: Feed name<br/>• If no connected Feed: channel name (text only, no link)<br/>• If private channel: `🔒[private feed]` (text only, no link) | Feed page          |
 | @User group                          | Name of group (text only, no link)                                                                                                                                         |                    |
 | @here,<br/> @channel,<br/> @everyone | Text only, no link                                                                                                                                                         |                    |
@@ -81,9 +80,9 @@ Posts and comments by bot users will only be synced to the Tightknit companion s
 
 <Callout type="warning" emoji="⚠️">
   **Known Limitation**: Slack bots that send _only_ Block Kit UI for their
-  messages are not support. Tightknit will only sync the `text` of a slack
-  message. If you are seeing issues with bot messages in you Tightknit companion
-  site, please contact [support](mailto:support@tightknit.ai).
+  messages are not supported. Tightknit will only sync the `text` of a Slack
+  message. If you are seeing issues with bot messages in your Tightknit
+  companion site, please contact [Support](mailto:support@tightknit.ai).
 </Callout>
 
 ## Limitations
