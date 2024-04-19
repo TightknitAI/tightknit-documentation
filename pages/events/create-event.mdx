@@ -12,7 +12,9 @@ Events can be published on the companion site and in select Slack channels.
 
 ![Manage Events Panel](/events/manage-events-panel.png)
 
-Use the global shortcut `/events` to navigate to the Events modal. Alternatively, users can access the modal by clicking the `Events` button in the Tightknit app home.
+Use the global shortcut `/events` to open to the Events modal. The shortcut option will appear as you type `/events` into any conversation message.
+
+![Global Shortcut](/events/events-shortcut.png)
 
 From here, press the `+ Create New Event` button.
 
@@ -25,10 +27,12 @@ From here, press the `+ Create New Event` button.
 
 ![Create Event Panel](/events/create-event-panel.png)
 
-Here is where you will add the event title, description, date, time, and location.
+Here is where you will add the details of your event.
 
 - **Title**: The title of the event.
 - **Hosts**: The host(s) of the event.
+- **Speakers**: The speaker(s) of the event (internal Slack users).
+- **External Speakers**: The speaker(s) of the event that are external to Slack.
 - **Start Date**: The start date and time of the event.
 - **End Date**: The end date and time of the event.
 - **Link**: A relevant link for the event. Must be a proper `https://` URL. If the Link is not provided, you must provide the Location instead.
@@ -49,24 +53,31 @@ Here is an example of how the event will look on the site:
 
 ![Event on Forum](/events/event-on-forum.png)
 
-### Save Draft
+### Save Draft and Preview
 
-When you have completed the event information, press the "Save Draft" button to save your event.
-You can return to it later to finish editing at any time.
+When you have completed the event information, press the "Save and Preview". A draft of your event will automatically be saved, and it is safe to close the modal.
 
-### Publish Event / Submit for Approval
+![Event draft preview](/events/draft-preview-panel.png)
 
-When you are ready to publish your event, first navigate to `My Drafts` on the Events panel.
-On the overflow menu, you'll see the option to Publish Event.
+#### Submitting from Draft Preview
 
-- If you are an admin, you'll see the option to Publish Event.
+You'll also have the option to submit your event at this time, if you choose. Admins will have the option to immediately publish the event, and champions will have the option to submit the event for admin approval.
+
+#### Save For Later
+
+You can always come back to work on this event later if you exit the modal. Once you are ready to publish your event, open the Events panel and navigate to `My Drafts`.
+On the overflow menu, you'll see the option to submit your event.
+
+- If you are an admin, you'll see the option to "Publish Event".
 - If you are a champion, you will see a "Submit for Approval" option.
 
 ### Approve Event (Admin Only)
 
 If you are a champion, you will first need your event approved before it is published. Once approved, the event will be published to the channels you selected.
 
-If you are an admin, you will see the event under the "Needs Approval" dropdown selection. If you go to the overflow menu, you can approve the event which will publish it immediately.
+If you are an admin, you will see the events awaiting approval under the "Needs Approval" dropdown selection. If you go to the overflow menu, you can approve the event which will publish it immediately.
+
+You will also receive notifications for the approval requests in your [Tightknit Hub channel](../slack-administration/community-settings#tightknit-hub-channel), from which you can directly approve and publish the event, edit the event, or DM the event creator for clarifications.
 
 </Steps>
 
@@ -76,4 +87,4 @@ Your event will be announced on the channel(s) you selected. Congrats! 🎉
 
 ![Published Event](/events/published-event.png)
 
-Keep in mind that any further edits you make to the event details will be automatically reflected on _all_ of the announcement messages.
+Need to make updates? No worries! Any further edits you make to the event details will be automatically reflected on _all_ of the announcement messages.
