@@ -104,23 +104,25 @@ The payload includes the action and status (e.g. 'registered' vs 'unregistered')
 
 ## One-click Registration
 
-Prevent your users from having to make redundant registrations in multiple places. If your event registration info lives on a third-party platform (e.g., Zoom, Luma, Google Calendar, etc), you can configure one-click registration through your Tightknit events webhook.
+Prevent your users from having to make redundant registrations in multiple places! If your event registration info lives on a third-party platform (e.g., Zoom, Luma, Google Calendar, etc), you can configure one-click registration for your Tightknit events by taking advantage of the webhook feature. In other words, when a user clicks "Register" in Slack, their registration information is forwarded to another system like Zoom.
 
 <Steps>
-### Create webhook
+### Create webhook endpoint
 
-Once you have reviewed the
+In a webhook application of your choice (e.g., [Zapier](https://zapier.com/features/webhooks), [Make](https://www.make.com/en/integrations/gateway)), create a webhook endpoint that will listen for Tightknit events. Copy the URL of the endpoint.
 
-### Configure webhook endpoint with Tightknit settings
+### Configure Tightknit webhook settings
 
-Once you have reviewed the
+In the [Tighktnit Events admin settings](#admin-global-settings), save the webhook URL from the previous step. For example, a webhook URL from Zapier might look like this: `https://hooks.zapier.com/hooks/catch/123456/abcd1234`
 
 ### Find relevant metadata for event on third-party platform
 
-Once you have reviewed the
+Determine what information is required to match the event from Tightknit with the event on your third-party platform. Typically, this is a unique identifier (ID) for the event. For example, a Zoom webinar might have an ID like this: `88333096148`
 
-### Configure custom metadata for Tightknit event
+### Configure Tightknit event webhook custom metadata
 
-Once you have reviewed the
+To edit your event in Tightknit, use the `/events` command, find your event in the list, and select `Edit Event` from the drop-down menuu. Under the [**Registration Settings**](#event-settings) section, save the metadata from the previous step in the _Webhook Custom Metadata_ field.
+
+Each time a user clicks the registration button in Slack, Tightknit will send a payload to your webhook URL that contains the custom metadata. You can use this custom metadata to connect the registration information in the third-party platform.
 
 </Steps>
