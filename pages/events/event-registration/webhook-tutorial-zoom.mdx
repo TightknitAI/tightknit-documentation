@@ -7,7 +7,7 @@ In this tutorial, we will use Zapier to connect Tightknit's one-click event regi
 <Steps>
 ### Create a new Zap
 
-To get started, open Zapier and create a new Zap ([instructions](https://help.zapier.com/hc/en-us/articles/8496309697421-Create-Zaps)). Alternatively, you can clone our pre-made [zap template](https://zapier.com/shared/tightknit-events-webhook-zoom-webinar/b57cd610b355ef5d83e8299cd9b1f487b5d25481).
+To get started, open then [Zapier zap editor](https://zapier.com/app/zaps) and create a new zap ([instructions](https://help.zapier.com/hc/en-us/articles/8496309697421-Create-Zaps)). Alternatively, you can clone our pre-made [zap template](https://zapier.com/shared/tightknit-events-webhook-zoom-webinar/b57cd610b355ef5d83e8299cd9b1f487b5d25481).
 
 ### Add the "Webhooks" trigger
 
@@ -30,15 +30,17 @@ Click on the action to open the webhook settings.
 
 ![Zapier Webhook Test tab](/events/tutorials/zapier-webhook-test-tab.png)
 
-We'll leave the zap here for now and come back to it in a later step.
+Zapier is now listening for applications sending data to this URL. We'll leave the Zap here for the moment and come back to it in a later step.
 
 ### Register the Webhook URL with Tightknit
 
-In Slack, open the Tightknit app home admin settings. Click the `Events` button under the _Events Platform_ module.
+Open the Tightknit admin Event Settings in Slack, by opening the Tightknit app home and clicking the `Events` button under the _Events Platform_ module.
 
 Paste the webhook URL from the previous step into the _Webhook URL_ field, and click Save.
 
 ![Event Admin Settings](/events/events-admin-settings.png)
+
+Tightknit is now configured to send registration data to the Zapier webhook URL.
 
 ### Get Zoom Meeting ID
 
@@ -48,7 +50,9 @@ Log in to the Zoom online portal and navigate to your Meetings/Webinars. To work
 
 ### Register the Zoom ID with your Tightknit Event
 
-In Slack, open the Tightknit events list by clicking the `Events` button in the app home or by typing the `\events` command. Click the `•••` menu next to your event and select `Edit`.
+We need to include the Zoom ID in the data sent to the Zap so that Zapier knows which specific Zoom event the user registered for.
+
+Open the Tightknit events list in Slack by clicking the `Events` button in the app home or by typing the `\events` command. Click the `•••` menu next to your event and select `Edit`.
 
 ![Edit Tightknit Event](/events/tutorials/edit-event-menu.png)
 
@@ -56,11 +60,11 @@ Under the **Registration Settings** section, paste the Zoom meeting ID into the 
 
 ![Event Custom Metadata Settings](/events/tutorials/event-custom-metadata.png)
 
-Tightknit is now configured to send information to the webhook URL each time a user registers for this event.
+Tightknit will now include the Zoom ID in the data sent to the webhook URL.
 
 ### Test the Tightknit Webhook
 
-It's easier to work with sample data, so register for your own event in order to test the webhook. You can do this by clicking the `•••` menu next to your event and selecting the registration option.
+It's easier to work with sample data, so let's do a test run. Register for your own Tightknit event in Slack. You can do this by clicking the `•••` menu next to your event and selecting the registration option.
 
 ![Event Registration Menu Option](/events/tutorials/registration-menu-option.png)
 
@@ -71,11 +75,11 @@ It's easier to work with sample data, so register for your own event in order to
 
 ### Verify Data Received by Zap
 
-Jump back to the Zap editor from earlier. Under the "Test" tab, click the `Find new records` button. You should see at least one record of your event registration in the previous step. Select the record and click `Continue with selected record`.
+Jump back to the Zap editor from earlier. Under the "Test" tab, click the `Find new records` button. You should see at least one record of your registration test run in the previous step. Select the record and click `Continue with selected record`.
 
 ![Event Registration Menu Option](/events/tutorials/zapier-test-data.png)
 
-The sample data will help us select certain fields from the payload in subsequent Zapier actions.
+This sample data will give us useful visual aids in Zapier when selecting fields from the webhook data.
 
 ### Add Zoom Action to Zap
 
@@ -85,13 +89,13 @@ In the Zap editor, click the `+` to add a new action. Search for the "Zoom" acti
 
 ### Configure Zoom Action
 
-Click on the step to open the Zoom action settings.
+Click on the Zoom action to open the settings. We will instruct Zoom on how to register a new user based on the incoming data Tightknit sends to Zapier.
 
 1. Under the "App & Event" tab, select _Create Webinar Registrant_ or _Create Meeting Registrant_, depending on your Zoom event type. Click Continue.
 1. Under the "Account" tab, login to to your Zoom account. Click Continue.
 1. Under the "Action" tab, configure the following fields:
 
-- **Upcoming Webinar** - select the _Custom_ tab and search for "Custom Metadata". Select the "Custom Metadata" field from the webhook trigger.
+- **Upcoming Webinar** - this will be the ID of the Zoom meeting/webinar, which we've configured Tightknit to send in the _Custom Metadata_ field of the webhook data. Select the _Custom_ tab, search for "Custom Metadata", and select the "Custom Metadata" option associated with the webhook trigger.
 - **Email** - select the "User Email" field from the webhook trigger.
 - **First Name** - select the "User First Name" field from the webhook trigger.
 
@@ -106,9 +110,19 @@ Click on the step to open the Zoom action settings.
   profile fields if they would serve as helpful user registration info.
 </Callout>
 
+<Callout type="warning">
+  Do NOT hardcode the Zoom action input values. It's an easy mistake to set the
+  **Upcoming Webinar** to a specific Zoom meeting in the dropdown list. If you
+  accidentally do this, users that registers for _any_ event in Slack will
+  always be forwarded to that one particular Zoom meeting, even if they were
+  trying to register for a different event.
+</Callout>
+
 ### Test Zoom Action
 
-Under the "Test" tab, you can click the `Test step` button. If you own the Zoom event, you should be met with an error. That's expected! Zoom does not allow the owner to register for their own event. This is proof you've successfully connected to your Zoom event!
+Let's make sure Zapier can find the correct Zoom meeting/webinar with a test run.
+
+Under the "Test" tab, you can click the `Test step` button. If you own the Zoom event, you will be met with an error. Don't worry - that's expected! Zoom does not allow the owner to register for their own event. This is proof you've successfully connected to your Zoom event!
 
 Click `Continue` or `Skip`.
 
@@ -123,5 +137,29 @@ Next, click the On/Off toggle in the top-left of the toolbar to enable your Zap.
 ![Zapier On/Off Button](/events/tutorials/zapier-on-off-button.png)
 
 Your Zap is now live and ready to forward your Tightknit event registrations to Zoom! 🎉
+
+### BONUS: Add Branching Logic for Register vs. Unregister
+
+Right now, our zap assumes every time data is sent to the webhook it means a new user has registered for an event. Technically this is not true! Tightknit sends other kind of data too, such as a user _unregistering_ for an event.
+
+Let's assume you want to take some sort of action, or simply ignore, an _unregister_ event. We'll need to add branching logic in the zap in order to differentiate based on the incoming data. In this case, we'll create a branch based on the `status` field of the [Tightknit webhook data](../event-registration#events-webhook).
+
+Add a zap action in between the Webhook and the Zoom actions. Select the **Paths by Zapier** action, and configure each branch as follows:
+
+- Name the left-side branch "Registered". Choose a custom rule that will continue if `Status` exactly matches "registered".
+- Name the right-side branch "Unregistered". Choose a custom rule that will continue if `Status` exactly matches "unregistered".
+
+<Callout>
+  **Zapier Limitation** <br />
+  Zaps that contain the **Paths** action cannot be copied or converted into a template.
+</Callout>
+
+Move the Zoom action under the left-side branch. When you're finished, your zap should look something like this:
+
+![Zapier Paths](/events/tutorials/zapier-paths.png)
+
+You must add some action under the right-hand side too before you can publish the Zap. If you'd rather just completely ignore _unregister_ events, you can use the **Filter** Zapier action instead of **Paths**, and only continue if `Status` exactly matches "registered".
+
+<Callout type="info">Don't forget to republish the Zap!</Callout>
 
 </Steps>
