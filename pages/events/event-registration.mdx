@@ -1,0 +1,137 @@
+import { Steps, Tabs, Cards, Card } from "nextra/components";
+
+# Event Registration
+
+When you create or edit an event, you will be able to enable and configure registration settings for the event within Slack.
+
+## Admin Global Settings
+
+Admins can configure global event settings by clicking the `Event Settings` button under the **Events Promotion** module on the app home page.
+
+- **Webhook URL** - provide a URL to which Tightknit will send event registration information to, which can be used to configure a one-click registration system within Slack
+- **Registration Button Text** - defines the label used for the event's registration button
+- **Event Unregistration** - when enabled, users have the option to remove themselves from events they have registered for
+
+![Event Admin Settings](/events/events-admin-settings.png)
+
+## Event Settings
+
+When you create or edit an event, you will be able to configure registration settings for that event under the **Registration Settings** section.
+
+- **Show registration button for event** - enables users to register for the event
+- **Use Event Link for registration button** - when enabled, the registration button will redirect users to the URL provided in the _Link_ field. The link will no longer be shown in the event body. Webhook events are still fired when the registration button is clicked. In order to enable this setting, you must have the registration button enabled and a URL defined in the event _Link_ field.
+- **Make guest list and guest count public** - when enabled, all users are able to see the number of attendees and the guest list for published events
+- **Webhook Custom Metadata** - any value configured here is included as a string in the `custom_metadata` field in the payload sent to the events registration webhook. Can be used to configure one-click registration by including metadata from a third-party event system.
+
+![Event Registration Settings](/events/event-registration-settings.png)
+
+## Events Webhook
+
+Each time a user registers or unregisters for a Tightknit event in Slack, we send information about the registration event to your webhook URL.
+
+The payload includes the action and status (e.g. 'registered' vs 'unregistered'), information about the Tightknit event, information about the user, the source of the interaction, and the event's custom metadata (if configured). The user info includes [custom profile fields](https://slack.com/help/articles/212281478-Customize-member-profiles) configured for Slack profiles in the workspace.
+
+<Tabs items={['API', 'Example']}>
+<Tabs.Tab>
+```
+{
+  version: string;
+  action: string;
+  status: 'registered' | 'unregistered';
+  date: string;
+  custom_metadata?: string;
+  event: {
+    id: string;
+    title: string;
+    slug: string;
+  };
+  source: {
+    slack_workspace_id: string;
+    slack_channel_id?: string;
+  };
+  user: {
+    id: string;
+    first_name: string;
+    last_name: string;
+    real_name: string;
+    display_name: string;
+    email: string;
+    profile_fields: {
+      [FIELD_API_NAME]: {
+        label: string;
+        value: string;
+      };
+    };
+  };
+}
+```
+</Tabs.Tab>
+<Tabs.Tab>
+```
+{
+  "version": "1.0",
+  "action": "event_registration_status_change",
+  "date": "2024-05-02T03:33:35.052Z",
+  "status": "registered",
+  "custom_metadata": null,
+  "event": {
+    "id": "s46on9pp403o",
+    "title": "Tech Talk: Save Time Saving",
+    "slug": "talk-save-time-saving"
+  },
+  "source": {
+    "slack_workspace_id": "T010ABCDEF"
+  },
+  "user": {
+    "id": "U01234ABCD",
+    "first_name": "Ozzy",
+    "last_name": "Otter",
+    "real_name": "Ozzy Otter",
+    "display_name": "Ozzy the Otter",
+    "email": "ozzy@otters.com",
+    "profile_fields": {
+      "Xf060Z34JTHZ": {
+        "label": "Favorite Movie",
+        "value": "Groundhog Day"
+      }
+    }
+  }
+}
+```
+
+</Tabs.Tab>
+</Tabs>
+
+## One-click Registration
+
+Prevent your users from having to make redundant registrations in multiple places! If your event registration info lives on a third-party platform (e.g., Zoom, Luma, Google Calendar, etc), you can configure one-click registration for your Tightknit events by taking advantage of the webhook feature. In other words, when a user clicks "Register" in Slack, their registration information is forwarded to another system like Zoom.
+
+<Steps>
+### Create webhook endpoint
+
+In a webhook application of your choice (e.g., [Zapier](https://zapier.com/features/webhooks), [Make](https://www.make.com/en/integrations/gateway)), create a webhook endpoint that will listen for Tightknit events. Copy the URL of the endpoint.
+
+### Configure Tightknit webhook settings
+
+In the [Tighktnit Events admin settings](#admin-global-settings), save the webhook URL from the previous step. For example, a webhook URL from Zapier might look like this: `https://hooks.zapier.com/hooks/catch/123456/abcd1234`
+
+### Find relevant metadata for event on third-party platform
+
+Determine what information is required to match the event from Tightknit with the event on your third-party platform. Typically, this is a unique identifier (ID) for the event. For example, a Zoom webinar might have an ID like this: `88333096148`
+
+### Configure Tightknit event webhook custom metadata
+
+To edit your event in Tightknit, use the `/events` command, find your event in the list, and select `Edit Event` from the drop-down menuu. Under the [**Registration Settings**](#event-settings) section, save the metadata from the previous step in the _Webhook Custom Metadata_ field.
+
+Each time a user clicks the registration button in Slack, Tightknit will send a payload to your webhook URL that contains the custom metadata. You can use this custom metadata to connect the registration information in the third-party platform.
+
+</Steps>
+
+For more specific examples, check out the following tutorials:
+
+<Cards>
+  <Card
+    title="⚡ Zapier Webhook → Zoom Webinar"
+    href="/events/event-registration/webhook-tutorial-zoom"
+  />
+</Cards>
