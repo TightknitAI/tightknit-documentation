@@ -80,7 +80,8 @@ The payload includes the action and status (e.g. 'registered' vs 'unregistered')
     "slug": "talk-save-time-saving"
   },
   "source": {
-    "slack_workspace_id": "T010ABCDEF"
+    "slack_workspace_id": "T010ABCDEF",
+    "slack_channel_id": "C064T2GAZD9"
   },
   "user": {
     "id": "U01234ABCD",
@@ -124,6 +125,10 @@ Determine what information is required to match the event from Tightknit with th
 To edit your event in Tightknit, use the `/events` command, find your event in the list, and select `Edit Event` from the drop-down menuu. Under the [**Registration Settings**](#event-settings) section, save the metadata from the previous step in the _Webhook Custom Metadata_ field.
 
 Each time a user clicks the registration button in Slack, Tightknit will send a payload to your webhook URL that contains the custom metadata. You can use this custom metadata to connect the registration information in the third-party platform.
+
+### Set up webhook application workflow
+
+In the webhook application of your choice from Step 1, configure a workflow to take in the [event registration data from Tightknit](#events-webhook). Forward this data to the third-party platform, and connect it to the correct record on that platform by matching on the custom metadata from Step 4.
 
 </Steps>
 
