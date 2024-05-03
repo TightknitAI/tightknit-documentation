@@ -18,7 +18,7 @@ In this tutorial, we will use Zapier to connect Tightknit's one-click event regi
 <Steps>
 ### Create a new Zap
 
-To get started, open then [Zapier zap editor](https://zapier.com/app/zaps) and create a new zap ([instructions](https://help.zapier.com/hc/en-us/articles/8496309697421-Create-Zaps)). Alternatively, you can clone our pre-made [zap template](https://zapier.com/shared/tightknit-events-webhook-zoom-webinar/b57cd610b355ef5d83e8299cd9b1f487b5d25481).
+To get started, open the [Zapier zap editor](https://zapier.com/app/zaps) and create a new zap ([instructions](https://help.zapier.com/hc/en-us/articles/8496309697421-Create-Zaps)). Alternatively, you can clone our pre-made [zap template](https://zapier.com/shared/tightknit-events-webhook-zoom-webinar/b57cd610b355ef5d83e8299cd9b1f487b5d25481).
 
 ### Add the "Webhooks" trigger
 
@@ -92,6 +92,11 @@ Jump back to the Zap editor from earlier. Under the "Test" tab, click the `Find 
 
 This sample data will give us useful visual aids in Zapier when selecting fields from the webhook data.
 
+<Callout>
+  The shape of Tightknit's webhook data may change. Please check the [API
+  docs](/events/event-registration#events-webhook) for the latest.
+</Callout>
+
 ### Add Zoom Action to Zap
 
 In the Zap editor, click the `+` to add a new action. Search for the "Zoom" action.
@@ -114,7 +119,7 @@ Click on the Zoom action to open the settings. We will instruct Zoom on how to r
 
 <Callout type="info">
   You're free to fill in any additional fields as you like. Keep in mind
-  Tightknit will send along any [custom profile
+  Tightknit will also send along any [custom profile
   fields](https://slack.com/help/articles/212281478-Customize-member-profiles)
   configured for Slack profiles in the workspace
   ([example](../event-registration#events-webhook)). Consider adding some
