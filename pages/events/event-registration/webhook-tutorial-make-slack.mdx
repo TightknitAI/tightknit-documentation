@@ -1,0 +1,111 @@
+import { Steps, Callout } from "nextra/components";
+
+# Tutorial: Make Webhook → Slack notification
+
+In this tutorial, we will use [Make](https://www.make.com) with Tightknit's one-click event registration so that you get a notification in Slack each time a new user registers for your event.
+
+<Steps>
+### Create a new Scenario
+
+To get started, open the scenario editor in Make and create a new scenario ([instructions](https://www.make.com/en/help/scenarios/scenario-editors)).
+
+### Add the Webhook trigger
+
+Add the initial trigger module and search for "Webhooks". Select "Custom webhook".
+
+![Make webhook](/events/tutorials/make-webhook.png)
+
+Click the `Create a webhook` button. Give the webhook a name such as "Webhook for Tightknit Events" and click Save.
+
+### Copy the Webhook URL
+
+Locate the URL for your webhook and copy it. You can also click the `Copy address to clipboard` button.
+
+![Make webhook URL](/events/tutorials/make-webhook-url.png)
+
+### Register the Webhook URL with Tightknit
+
+Open the Tightknit admin Event Settings in Slack, by opening the Tightknit app home and clicking the `Events` button under the _Events Platform_ module.
+
+Paste the webhook URL from the previous step into the _Webhook URL_ field, and click Save.
+
+![Event Admin Settings](/events/tutorials/tightknit-make-webhook-entry.png)
+
+Tightknit is now configured to send registration data to the Make webhook URL.
+
+### Test the Tightknit Webhook
+
+It's easier to work with sample data, so let's do a test run. In the scenario editor, click the `Run once` button.
+
+<Callout>
+  The shape of Tightknit's webhook data may change. Please check the [API
+  docs](/events/event-registration#events-webhook) for the latest.
+</Callout>
+
+![Make Run once button](/events/tutorials/make-run-once-button.png)
+
+![Make listening webhook](/events/tutorials/make-webhook-listening.png)
+
+Make will be listening for incoming webhook data.
+
+Now, back in Slack, register for your own Tightknit event. You can do this by clicking the `•••` menu next to your event and selecting the registration option.
+
+![Event Registration Menu Option](/events/tutorials/registration-menu-option.png)
+
+<Callout type="info">
+  The exact label of the registration option may differ depending on your
+  community's configuration.
+</Callout>
+
+### Verify Data Received by Make
+
+In the scenario editor, you should see that the scenario run was completed. Click the `1` bubble above the webhook module. This will show you the data that the webhook received from Tightknit.
+
+![Make Webhook data](/events/tutorials/make-webhook-data.png)
+
+This sample data will give us useful visual aids in Make when selecting fields from the webhook data.
+
+### Add Slack module to scenario
+
+In the scenario editor, click the `+` action by hovering over the side of the webhook module. Search for "Slack" and select the "Create a Message" action.
+
+![Make new slack module](/events/tutorials/make-slack-action.png)
+
+### Configure Slack notification
+
+Log into your Slack account to authenticate the Make connection. This will require you to use the Integromat app in your Slack workspace.
+
+Configure the Slack module as follows:
+
+- **Connection** - specify which user/connection you want to create the Slack message, such as your own Slack user
+- **Channel ID or name** - Select from the list
+- **Public/Private channel** - select the channel you want the notification message to be sent to
+- **Text** - here you can format the body of the notification message however you want! You'll have access to variables from the webhook data that you can insert into the message. See below for an example notification body that uses the registrant user info and event info.
+
+![Slack notification message](/events/tutorials/make-slack-configuration.png)
+
+<Callout type="info">
+  The **Text** field uses [Slack
+  markup](https://slack.com/help/articles/202288908-Format-your-messages#markup)
+  formatting.
+</Callout>
+
+<Callout type="info">
+  Keep in mind Tightknit will also send along any [custom profile
+  fields](https://slack.com/help/articles/212281478-Customize-member-profiles)
+  configured for Slack profiles in the workspace
+  ([example](../event-registration#events-webhook)). Consider adding some
+  profile fields if they would serve as helpful user registration info.
+</Callout>
+
+### Save and Enable
+
+Click the 💾 save button and switch on the toggle to enable your scenario.
+
+![Slack notification message](/events/tutorials/make-save.png)
+
+Your Make scenario is now live and listening for incoming Tightknit events! Registration changes will now send notifications to your Slack channel.
+
+![Slack notification message](/events/tutorials/make-slack-notification.png)
+
+</Steps>
