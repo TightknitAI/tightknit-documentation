@@ -37,11 +37,6 @@ Tightknit is now configured to send registration data to the Make webhook URL.
 
 It's easier to work with sample data, so let's do a test run. In the scenario editor, click the `Run once` button.
 
-<Callout>
-  The shape of Tightknit's webhook data may change. Please check the [API
-  docs](/events/event-registration#events-webhook) for the latest.
-</Callout>
-
 ![Make Run once button](/events/tutorials/make-run-once-button.png)
 
 ![Make listening webhook](/events/tutorials/make-webhook-listening.png)
@@ -65,6 +60,11 @@ In the scenario editor, you should see that the scenario run was completed. Clic
 
 This sample data will give us useful visual aids in Make when selecting fields from the webhook data.
 
+<Callout>
+  The shape of Tightknit's webhook data may change. Please check the [API
+  docs](/events/event-registration#events-webhook) for the latest.
+</Callout>
+
 ### Add Slack module to scenario
 
 In the scenario editor, click the `+` action by hovering over the side of the webhook module. Search for "Slack" and select the "Create a Message" action.
@@ -77,10 +77,10 @@ Log into your Slack account to authenticate the Make connection. This will requi
 
 Configure the Slack module as follows:
 
-- **Connection** - specify which user/connection you want to create the Slack message, such as your own Slack user
+- **Connection** - specify which user/connection that will be the sender of the Slack message, such as your own Slack user
 - **Channel ID or name** - Select from the list
 - **Public/Private channel** - select the channel you want the notification message to be sent to
-- **Text** - here you can format the body of the notification message however you want! You'll have access to variables from the webhook data that you can insert into the message. See below for an example notification body that uses the registrant user info and event info.
+- **Text** - here you can format the body of the notification message however you want! You'll have access to variables from the webhook data which you can insert into the message. See below for an example notification body that makes use of the registrant user info and event info.
 
 ![Slack notification message](/events/tutorials/make-slack-configuration.png)
 
