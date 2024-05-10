@@ -25,13 +25,21 @@ Locate the URL for your webhook and copy it. You can also click the `Copy addres
 
 ### Register the Webhook URL with Tightknit
 
-Open the Tightknit admin Event Settings in Slack, by opening the Tightknit app home and clicking the `Events` button under the _Events Platform_ module.
+In the Tighktnit [webhooks](/integrations/webhooks) admin settings, [register a new webhook](/integrations/webhooks#register-a-new-webhook) using the webhook URL from the previous step.
 
-Paste the webhook URL from the previous step into the _Webhook URL_ field, and click Save.
+![Create webhook modal](/events/tutorials/make/create-make-webhook.png)
 
-![Event Admin Settings](/events/tutorials/tightknit-make-webhook-entry.png)
+### Use the Webhook with your Tightknit Event
 
-Tightknit is now configured to send registration data to the Make webhook URL.
+We need to update your event to use this new webhook. Open the Tightknit events list in Slack by clicking the `Events` button in the app home or by typing the `\events` command. Click the `•••` menu next to your event and select `Edit`.
+
+![Edit Tightknit Event](/events/tutorials/edit-event-menu.png)
+
+Under the **Registration Settings** section, select your webhook for **Webhook for Registration Data**. Click Save.
+
+![Event Registration Settings](/events/tutorials/make/assign-make-webhook.png)
+
+Tightknit is now configured to send registration data to your webhook endpoint.
 
 ### Test the Tightknit Webhook
 

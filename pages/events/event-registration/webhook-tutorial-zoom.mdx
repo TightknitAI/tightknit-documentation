@@ -2,17 +2,6 @@ import { Steps, Callout } from "nextra/components";
 
 # Tutorial: Zapier Webhook → Zoom
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/hDDD0matrh0?si=VYnsJDuB_tc1Zgy_"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin"
-  allowfullscreen
-></iframe>
-
 In this tutorial, we will use Zapier to connect Tightknit's one-click event registration to a Zoom webinar. When a user clicks the register button in Slack, they will be marked as an attendee in the Tightknit system _and_ automatically get registered for the Zoom webinar.
 
 <Steps>
@@ -45,13 +34,9 @@ Zapier is now listening for applications sending data to this URL. We'll leave t
 
 ### Register the Webhook URL with Tightknit
 
-Open the Tightknit admin Event Settings in Slack, by opening the Tightknit app home and clicking the `Events` button under the _Events Platform_ module.
+In the Tighktnit [webhooks](/integrations/webhooks) admin settings, [register a new webhook](/integrations/webhooks#register-a-new-webhook) using the webhook URL from the previous step.
 
-Paste the webhook URL from the previous step into the _Webhook URL_ field, and click Save.
-
-![Event Admin Settings](/events/events-admin-settings.png)
-
-Tightknit is now configured to send registration data to the Zapier webhook URL.
+![Create webhook modal](/integrations/webhooks/create-webhook-modal.png)
 
 ### Get Zoom Meeting ID
 
@@ -67,11 +52,16 @@ Open the Tightknit events list in Slack by clicking the `Events` button in the a
 
 ![Edit Tightknit Event](/events/tutorials/edit-event-menu.png)
 
-Under the **Registration Settings** section, paste the Zoom meeting ID into the _Webhook Custom Metadata_ field. Click Save.
+Under the **Registration Settings** section, configure the following:
 
-![Event Custom Metadata Settings](/events/tutorials/event-custom-metadata.png)
+1. Select your webhook for **Webhook for Registration Data**
+2. Paste the Zoom meeting ID into the **Webhook Custom Metadata** field
 
-Tightknit will now include the Zoom ID in the data sent to the webhook URL.
+Click Save.
+
+![Event Registration Settings](/events/tutorials/one-click-event-registration-settings.png)
+
+Tightknit is now configured to send registration data to your webhook endpoint, including the Zoom ID.
 
 ### Test the Tightknit Webhook
 
