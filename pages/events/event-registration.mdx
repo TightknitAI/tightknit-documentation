@@ -8,7 +8,6 @@ When you create or edit an event, you will be able to enable and configure regis
 
 Admins can configure global event settings by clicking the `Event Settings` button under the **Events Promotion** module on the app home page.
 
-- **Webhook URL** - provide a URL to which Tightknit will send event registration information to, which can be used to configure a one-click registration system within Slack
 - **Registration Button Text** - defines the label used for the event's registration button
 - **Event Unregistration** - when enabled, users have the option to remove themselves from events they have registered for
 
@@ -19,9 +18,10 @@ Admins can configure global event settings by clicking the `Event Settings` butt
 When you create or edit an event, you will be able to configure registration settings for that event under the **Registration Settings** section.
 
 - **Show registration button for event** - enables users to register for the event
-- **Use Event Link for registration button** - when enabled, the registration button will redirect users to the URL provided in the _Link_ field. The link will no longer be shown in the event body. Webhook events are still fired when the registration button is clicked. In order to enable this setting, you must have the registration button enabled and a URL defined in the event _Link_ field.
+- **Use Event Link for registration button** - when enabled, the registration button will redirect users to the URL provided in the _Link_ field. The link will no longer be shown in the event body. You must have the registration button enabled and a URL defined in the event _Link_ field.
 - **Make guest list and guest count public** - when enabled, all users are able to see the number of attendees and the guest list for published events
-- **Webhook Custom Metadata** - any value configured here is included as a string in the `custom_metadata` field in the payload sent to the events registration webhook. Can be used to configure one-click registration by including metadata from a third-party event system.
+- **Webhook for Registration Data** - the webhook endpoint to send [registration data](#events-webhook) to. Each time a user changes their registration for this event (i.e. registers / unregisters), a request is sent to the specified webhook.
+- **Webhook Custom Metadata** - this value is included as a string in the `custom_metadata` field of the payload sent to the events registration webhook. Can be used to configure [one-click registration](#one-click-registration) by including metadata from a third-party event system.
 
 ![Event Registration Settings](/events/event-registration-settings.png)
 
