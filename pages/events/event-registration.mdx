@@ -29,7 +29,7 @@ When you create or edit an event, you will be able to configure registration set
 
 Each time a user registers or unregisters for a Tightknit event in Slack, we send information about the registration event to your webhook URL.
 
-The payload includes the action and status (e.g. 'registered' vs 'unregistered'), information about the Tightknit event, information about the user, the source of the interaction, and the event's custom metadata (if configured). The user info includes [custom profile fields](https://slack.com/help/articles/212281478-Customize-member-profiles) configured for Slack profiles in the workspace.
+The payload includes the action and status (e.g. `registered` vs `unregistered`), information about the Tightknit event, information about the user, the source of the interaction, and the event's custom metadata (if configured). The user info also includes [custom profile fields](https://slack.com/help/articles/212281478-Customize-member-profiles) configured for Slack profiles in the workspace.
 
 <Tabs items={['API', 'Example']}>
 <Tabs.Tab>
@@ -112,7 +112,7 @@ Prevent your users from having to make redundant registrations in multiple place
 
 In a webhook application of your choice (e.g., [Zapier](https://zapier.com/features/webhooks), [Make](https://www.make.com/en/integrations/gateway)), create a webhook endpoint that will listen for Tightknit events. Copy the URL of the endpoint.
 
-### Configure Tightknit webhook settings
+### Register the webhook in Tightknit
 
 In the [Tighktnit Events admin settings](#admin-global-settings), save the webhook URL from the previous step. For example, a webhook URL from Zapier might look like this: `https://hooks.zapier.com/hooks/catch/123456/abcd1234`
 

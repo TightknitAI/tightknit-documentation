@@ -1,0 +1,34 @@
+import { Callout } from "nextra/components";
+
+# 🪝 Webhooks
+
+With webhooks, the world of automation is at your fingertips! Admins can find webhook settings under the **Integrations** module on the app home page.
+
+## Accessing Webhooks
+
+Admins can view and register their webhooks with Tightknit by clicking the `Webhooks` button.
+
+![Webhooks List](/integrations/webhooks/webhooks-list.png)
+
+## Register a new Webhook
+
+Click the `+ Create Webhook` button to register your webhook with Tightknit. Once registered, you will be able to use this webhook as a data endpoint within various other Tightknit modules.
+
+![Create webhook modal](/integrations/webhooks/create-webhook-modal.png)
+
+Webhooks require the following fields:
+
+- **Name** - a helpful name to identify your webhook
+- **URL** - the URL endpoint for your webhook
+
+## Delete a Webhook
+
+![Delete webhook option](/integrations/webhooks/delete-webhook-option.png)
+
+To delete a webhook, click the `•••` next to the list item and select the `Delete` option.
+
+<Callout type="warning">
+  You will be restricted from deleting a webhook if it is currently in use
+  within a Tightknit module. You must remove all references to the webhook
+  before you can delete it.
+</Callout>
