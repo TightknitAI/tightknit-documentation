@@ -1,0 +1,151 @@
+import { Steps, Callout } from "nextra/components";
+
+# Tutorial: Make Webhook → Zoom
+
+In this tutorial, we will use [Make](https://www.make.com) with Tightknit's one-click event registration so that you can forward registrations into Zoom. In other words, when a user clicks the register button in Slack, they will be marked as an attendee in the Tightknit system _and_ automatically get registered for your Zoom webinar.
+
+<Steps>
+### Create a new Scenario
+
+To get started, open the scenario editor in Make and create a new scenario ([instructions](https://www.make.com/en/help/scenarios/scenario-editors)).
+
+### Add the Webhook trigger
+
+Add the initial trigger module and search for "Webhooks". Select "Custom webhook".
+
+![Make webhook](/events/tutorials/make-webhook.png)
+
+Click the `Create a webhook` button. Give the webhook a name such as "Webhook for Tightknit Events" and click Save.
+
+### Copy the Webhook URL
+
+Locate the URL for your webhook and copy it. You can also click the `Copy address to clipboard` button.
+
+![Make webhook URL](/events/tutorials/make-webhook-url.png)
+
+### Register the Webhook URL with Tightknit
+
+In the Tighktnit [webhooks](/integrations/webhooks) admin settings, [register a new webhook](/integrations/webhooks#register-a-new-webhook) using the webhook URL from the previous step.
+
+![Create webhook modal](/events/tutorials/make/make-zoom-webhook.png)
+
+### Get Zoom Meeting ID
+
+Log in to the Zoom online portal and navigate to your Meetings/Webinars. To work with Zoom's registration APIs, we simply need the ID of the meeting/webinar, which you can find in the details of the event. Copy the ID without the spaces.
+
+![Zoom ID](/events/tutorials/zoom-id.png)
+
+### Register the Zoom ID with your Tightknit Event Webhook
+
+We need to include the Zoom ID in the data sent to the Make scenario so that Make knows which specific Zoom event the user registered for.
+
+Open the Tightknit events list in Slack by clicking the `Events` button in the app home or by typing the `\events` command. Click the `•••` menu next to your event and select `Edit`.
+
+![Edit Tightknit Event](/events/tutorials/edit-event-menu.png)
+
+Under the **Registration Settings** section, configure the following:
+
+1. Select your webhook for **Webhook for Registration Data**
+2. Paste the Zoom meeting ID into the **Webhook Custom Metadata** field
+
+Click Save.
+
+![Event Registration Settings](/events/tutorials/make/make-zoom-event-reg.png)
+
+Tightknit is now configured to send registration data to your webhook endpoint, including the Zoom ID.
+
+### Test the Tightknit Webhook
+
+It's easier to work with sample data, so let's do a test run. In the scenario editor, click the `Run once` button.
+
+![Make Run once button](/events/tutorials/make-run-once-button.png)
+
+![Make listening webhook](/events/tutorials/make-webhook-listening.png)
+
+Make will be listening for incoming webhook data.
+
+Now, back in Slack, register for your own Tightknit event. You can do this by clicking the `•••` menu next to your event and selecting the registration option.
+
+![Event Registration Menu Option](/events/tutorials/registration-menu-option.png)
+
+<Callout type="info">
+  The exact label of the registration option may differ depending on your
+  community's configuration.
+</Callout>
+
+### Verify Data Received by Make
+
+In the scenario editor, you should see that the scenario run was completed. Click the `1` bubble above the webhook module. This will show you the data that the webhook received from Tightknit.
+
+![Make Webhook data](/events/tutorials/make/make-zoom-example-data.png)
+
+This sample data will give us useful visual aids in Make when selecting fields from the webhook data.
+
+<Callout>
+  The shape of Tightknit's webhook data may change. Please check the [API
+  docs](/events/event-registration#events-webhook) for the latest.
+</Callout>
+
+### Add Zoom Module to Scenario
+
+In the scenario editor, click the `+` action by hovering over the side of the webhook module. Search for "Zoom" and select the "Add a Meeting Registrant" or "Add a Webinar Registrant" action, depending on your event type.
+
+![Make new Zoom module](/events/tutorials/make/make-zoom-module.png)
+
+### Configure Zoom Module
+
+Under **Connection**, log into your Zoom account to authenticate the Make connection.
+
+Configure the Zoom module as follows:
+
+- **User ID** - Select your user id from the list
+- **Meeting/Webinar ID** - this will be the ID of the Zoom meeting/webinar, which we've configured Tightknit to send in the _Custom Metadata_ field of the webhook data. Select the `custom_metadata` option associated with the webhook trigger sample data.
+- **Email** - select `user: email`.
+- **First Name** - select `user: first_name`.
+
+![Zoom module config](/events/tutorials/make/make-zoom-config.png)
+
+<Callout type="warning">
+  Do NOT hardcode the Zoom action input values. It's an easy mistake to set the
+  **Meeting/Webinar ID** to a specific Zoom id. If you accidentally do this,
+  users that registers for _any_ event in Slack will always be forwarded to that
+  one particular Zoom meeting, even if they were trying to register for a
+  different event.
+</Callout>
+
+<Callout type="info">
+  Keep in mind Tightknit will also send along any [custom profile
+  fields](https://slack.com/help/articles/212281478-Customize-member-profiles)
+  configured for Slack profiles in the workspace
+  ([example](../event-registration#events-webhook)). Consider adding some
+  profile fields if they would serve as helpful user registration info.
+</Callout>
+
+### Save and Enable
+
+Click the 💾 save button and switch on the toggle to enable your scenario.
+
+![Make Save button](/events/tutorials/make-save.png)
+
+Your Make scenario is now live and ready to forward your Tightknit event registrations to Zoom! 🎉
+
+### BONUS: Add Branching Logic for Register vs. Unregister
+
+Right now, our scenario assumes that every time data is sent to the webhook it means a new user has registered for an event. Technically this is not true! Tightknit sends other kind of data too, such as a user _unregistering_ for an event.
+
+Let's assume you want to take some sort of action, or simply ignore, an _unregister_ event. We'll need to add branching logic in the scenario in order to differentiate based on the incoming data. In this case, we'll create a branch based on the `status` field of the [Tightknit webhook data](../event-registration#events-webhook).
+
+Click on the wrench icon in between the Webhook and the Zoom actions. Select the **Add a router** option. In order to add a new branch to the flow, click the Router module itself. On each of the branches, click on the wrench icon and select **Set up a filter**.
+
+- Name the first branch "Registered". Create a condition that will continue if `status` is equal to "registered".
+- Name the second branch "Unregistered". Create a condition that will continue if `status` is equal to "unregistered".
+
+When you're finished, the scenario should look something like this:
+
+![Make Router](/events/tutorials/make/make-zoom-branching.png)
+
+If you'd rather just completely ignore _unregister_ events, instead of using the Router you can simply add a filter on the path to the Zoom module with the condition the flow will continue if `status` is equal to "registered".
+
+<Callout type="info">Don't forget to save the scenario!</Callout>
+
+</Steps>
