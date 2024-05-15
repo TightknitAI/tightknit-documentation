@@ -1,4 +1,8 @@
 {
+  "-- Switcher": {
+    "type": "separator",
+    "title": "Switcher"
+  },
   "index": "Overview",
   "getting-started": "Getting Started",
   "basics": "Basics",
