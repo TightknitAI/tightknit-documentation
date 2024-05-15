@@ -1,4 +1,9 @@
 {
+  "-- Switcher": {
+    "type": "separator",
+    "title": "Switcher"
+  },
+  "index": "Overview",
   "get-started": "Get Started",
   "create-event": "Create an Event",
   "manage-events": "Manage Events",

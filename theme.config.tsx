@@ -48,12 +48,13 @@ const config: DocsThemeConfig = {
     toggleButton: true,
     titleComponent: ({ type, title, route }) => {
       const { asPath } = useRouter();
+      console.log({ type, title, route });
       if (type === "separator" && title === "Switcher") {
         return (
           <div className="-mx-2 hidden md:block">
             {[
-              { title: "Docs", path: "/basics", Icon: LibraryBig },
-              { title: "Guides", path: "/events", Icon: FileCode },
+              { title: "Sub-Page1", path: "/subpage1", Icon: FileCode },
+              { title: "Sub-Page2", path: "/subpage2", Icon: LibraryBig },
             ].map((item) => {
               // console.log(item);
               return asPath.startsWith(item.path) ? (
@@ -78,7 +79,12 @@ const config: DocsThemeConfig = {
           </div>
         );
       }
-      return title;
+      // else if (type === "doc") {
+      //   // regular doc page
+      //   const { asPath } = useRouter();
+      //   return asPath.startsWith(route) ? <>{title}</> : null;
+      // }
+      return <>{title}</>;
     },
   },
   docsRepositoryBase:
