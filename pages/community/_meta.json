@@ -1,3 +1,7 @@
 {
-  "index": "TODO"
+  "getting-started": "Getting Started",
+  "manage-community": "Manage Community Details",
+  "slack-invite-link": "Slack Invite Link",
+  "onboarding": "New Member Onboarding",
+  "admin-settings": "Admin Settings"
 }
