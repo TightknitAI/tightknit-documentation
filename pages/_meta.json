@@ -1,13 +1,18 @@
 {
-  "index": "Overview",
-  "getting-started": "Getting Started",
-  "basics": "Basics",
-  "branding": "Branding",
-  "events": "Events",
-  "integrations": "Integrations",
-  "tightknit-site": "Tightknit Companion Site",
-  "slack-administration": "Slack Administration",
-  "slack-community-best-practices": "Slack Community Best Practices",
+  "index": {
+    "type": "page",
+    "title": "Tightknit",
+    "display": "hidden"
+  },
+  "subpage1": {
+    "type": "page",
+    "title": "Sub-page1"
+  },
+  "subpage2": {
+    "type": "page",
+    "title": "Sub-page2",
+    "display": "hidden"
+  },
   "contact": {
     "title": "Homepage ↗",
     "type": "page",
