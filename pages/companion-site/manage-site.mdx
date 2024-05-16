@@ -15,7 +15,7 @@ Within the Site Details modal, you can configure the following:
 
 - **Site Name** - This is the name of your site.
   This will be used as the title in the header of your Tightknit companion site as well as the title within SEO metadata.
-- **Site Slug** - This is the subdomain that will be used when you host your site on `tightknit.community`.
+- **Site Subdomain (URL)** - This is the subdomain that will be used when you host your site on `.tightknit.community`. The subdomain is not used if you register a custom domain.
   <Callout type="info" emoji="ℹ️">
     If you're interested in using a custom domain, please reach out to
     [Support](mailto:support@tightknit.ai) or ask for help within the Slack
@@ -23,71 +23,8 @@ Within the Site Details modal, you can configure the following:
   </Callout>
   <Callout type="warning" emoji="⚠️">
     If not on a custom domain, updating a sites's slug will change the URL of
-    all site pages that use this slug. This will break any links that have been
-    shared.
+    all pages in the site. This will break any links that have been shared and
+    may have a negative impact on SEO.
   </Callout>
 
-![Tightknit Companion Site Details Modal](/slack-administration/community-details-modal.png)
-
-## Call-to-Action Button
-
-Within the Call-to-action Button settings modal, you can configure the following:
-
-- **Call-to-Action Text** - This is the text that is present on the Slack button [across the Tightknit companion site experience](../tightknit-site/navbar-and-sidebar.mdx#call-to-action-button). If you do not wish to show this button, leave this field empty.
-- **Call-to-Action URL** - This is the URL that the Slack button will link to when clicked. By default, it is the `/join` page of your community. We strongly recommend you keep this setting, since the `/join` URL will automatically redirect to your [Slack invite link](#slack-invite-link) and capture useful metrics.
-
-![Tightknit Companion Site Settings Modal](/slack-administration/site-call-to-action-button-modal.png)
-
-## Home Page
-
-Within the Home Page modal, you can configure the experience of the [Home page](../tightknit-site/home) of your site, including:
-
-- **Site Description** - This is the site description listed on the Home page.
-- **Banner Image** - The image banner at the top of the Home page. For the best results, please use an image with dimensions of at least 827 x 192. Very tall images may be clipped.
-
-![Tightknit Companion Site Home Page Modal](/slack-administration/home-page-modal.png)
-
-## Integrations
-
-Within the Integrations modal, you can configure Google Tag Manager.
-
-Google Tag Manager is a free tool that allows you to manage and deploy marketing tags (snippets of code or tracking pixels) on your website without having to modify the code.
-
-### How to set up Google Tag Manager
-
-<Steps>
-### Create a Google Tag Manager account and container
- 
-Visit [Google Tag Manager](https://tagmanager.google.com/) and create an account for your company.
-
-1. Click the Admin tab
-2. Click the + button next to the Container section
-3. Copy the Google Tag Manager ID (GTM-XXXXXX)
-4. Paste it into the Tightknit Integrations modal within Slack
-
-![Tightknit Companion Site Integrations Modal](/slack-administration/site-integrations-modal.png)
-
-### [Optional] Connect a Google Analytics Property
-
-Visit [Google Analytics](https://analytics.google.com/analytics/web/).
-
-For each website you own, you can create a “Property.”
-To create a property, follow these steps:
-
-1. Click the `⚙ Admin` Button in the bottom left corner
-2. Click the `+Create` button and select Property
-3. Copy the Measurement ID (G-XXXXXXXXXX)
-
-Now, we'll return back to [Google Tag Manager](https://tagmanager.google.com/) to add the Google Analytics Property to our container.
-To create a new Tag, follow these steps:
-
-1. Under Workspace, navigate to Tags on the left hand navigation
-2. Click the New button
-3. Click the Tag Configuration section and select Google Analytics > Google Tag
-4. Paste the Measurement ID from above (G-XXXXXXXXXX) into the Tag ID field
-5. Click the Triggering section, select Trigger Configuration, and then 'Initialization - All Pages'
-6. Click the Save button in the top right corner
-
-</Steps
-
->
+![Tightknit Companion Site Details Modal](/tightknit-site/site-details-modal.png)

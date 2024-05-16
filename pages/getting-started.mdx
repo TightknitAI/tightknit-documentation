@@ -58,29 +58,26 @@ Select the `Home` tab at the top of the page.
 
 ### Step 3
 
-If you don't already have a Tightknit community set up, you will see the `Create New Commmunity` button.
-Click the button and the Create a Community modal will pop up for you to fill out community details. Don't worry — you can always edit this later.
+If you don't already have a Tightknit community set up, you will see the `Launch Guided Setup` button.
+Click the button and you will be taken to the `Messages` tab at the top of the app page to begin the setup process.
 
-![Slack App Installation](/tightknit-app-new-community.png)
+![Slack App Installation](/getting-started/guided-setup-flow-start.png)
 
 ### Step 4
 
-Last step: click `Create`. You now have a Tightknit community! ✨
+Follow the onboarding instructions to create your community and configure some modules along the way.
 
 Your Tightknit community represents the top-most umbrella module that includes all other modules, such as: the companion forums site, events, gamification etc.
 
 </Steps>
 
-## (Optional) Sync Content to the Tightknit Companion Site
+## Companion Site Overview
 
-In the next step of the guided setup, you'll have the option to spin up your companion forums website. You will be able to sync content from Slack to your site to serve as a landing page to the rest of the internet!
-
-Tightknit will use the provided name, slug, and your current Slack workspace logo to create your site.
+As a part of the guided setup, you'll have the opportunity to spin up a companion forums website. You will be able to sync content from Slack to your site to serve as a landing page to the rest of the internet!
 
 ![New Tightknit companion site](/pinnacle-community.png)
 
-You will now see all of your Tightknit companion site information and settings on the Home page of
-the Tightknit app. Let's start syncing content from Slack over to the site! ✍️
+This is a high-level outline of how you would sync content from Slack over to the companion site:
 
 <Steps>
 
@@ -92,11 +89,23 @@ in the Tightknit companion site.
 For example, let's say you have a `#help` channel and want to sync it to a Feed in the Tightknit companion site. Once you have completed all the steps in this guide, Tightknit will sync
 new incoming Slack messages sent in `#help` as a post or comment in the site's "Help" Feed.
 
-### Enable the Slack Channel as a Tightknit Feed
+### Enable the Slack Channel
 
 If the channel is private, first add the Tightknit app as a member of the Slack channel. Then follow these
 [instructions](./slack-administration/channel-and-feed-settings.mdx#create-a-new-feed)
-to create the Tightknit Feed in the app settings.
+to allow Tightknit to see and manage the channel.
+
+### Create the Tightknit Feed
+
+Follow these
+[instructions](./slack-administration/channel-and-feed-settings.mdx#create-a-new-feed)
+to create a Tightknit Feed connected to the channel.
+
+### Send Messages
+
+This is the easy part. ✍️ Simply send messages within the Slack channel as normal, and
+sit back and relax as you watch them automatically sync to your Tightknit companion site!
+💯
 
 <Callout>
   Tightknit will only start syncing Slack messages to the Tightknit companion
@@ -105,11 +114,5 @@ to create the Tightknit Feed in the app settings.
   messages, you can certainly do so by using the [message
   shortcut](./basics/message-shortcuts)!
 </Callout>
-
-### Send Messages
-
-This is the easy part. Simply send messages within the Slack channel as normal, and
-sit back and relax as you watch them automatically sync to your Tightknit companion site!
-💯
 
 </Steps>

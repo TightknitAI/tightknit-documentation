@@ -1,29 +1,30 @@
 import { Callout } from "nextra/components";
 
-# Channel & Feed Settings
+# Create a Feed
 
 <Callout type="info">
   The Tightknit companion site is required to create Feeds.
 </Callout>
 
 **[Feeds](../tightknit-site/feed)** are the backbone of all posts in your companion site.
-Each Feed is configured to monitor your Slack channel to control when and how messages are posted to the site. Feeds can be managed from the app settings under the `Channels & Feeds` section.
+Each Feed is configured to monitor your Slack channel and control when and how messages are posted to the site. Feeds can be managed from the app settings under the `Channels & Feeds` section.
 
-![Tightknit Feed Settings Section](/slack-administration/channel-and-feed-settings.png)
+![Tightknit Feed Settings Section](/channels-and-feeds/channel-and-feed-settings.png)
 
-## Create a new Feed
+## Access
 
 <Callout type="info">
   You must first [enable a Slack channel](/channels-and-feeds/enable-channel)
   with Tightknit before you can create a Feed.
 </Callout>
 
-To create a Tightknit Feed that is connected to an enabled Slack channel, click the `Create Tightknit Feed` option within the row-level menu of the channel settings.
+You have the opportunity to create a Feed during the guided setup to [enable a channel](/channels-and-feeds/enable-channel#enable-a-channel-for-tightknit). You can also create a Tightknit Feed for enabled Slack channel by clicking the `Create Tightknit Feed` option within the row-level menu of the channel settings.
 
-![Create a new Feed](/slack-administration/channel-overflow-menu.png)
+![Create a new Feed](/channels-and-feeds/channel-overflow-menu.png)
 
-This will open a modal where you can enter the details of your new Feed.
-Here, you will need to choose:
+## Feed Settings
+
+In the Feed creation modal you can configure the following settings:
 
 - **Selected Channel** - The channel that this Feed will listen to for new messages.
 - **Feed Name** - The name of the Feed.
@@ -57,26 +58,9 @@ Additional optional settings:
 
 Once you have entered the details of your new Feed, click the `Create` button to create the Feed.
 
-![Feed Create Modal](/slack-administration/feed-create-modal.png)
+![Feed Create Modal](/channels-and-feeds/feed-create-modal.png)
 
 <Callout>
   You can create a max of 2 Feeds per Slack workspace. If you need more Feeds,
   please contact [Support](mailto:support@tightknit.ai).
 </Callout>
-
-## Update an existing Feed
-
-### Edit Feed
-
-To edit an existing Feed, click the `Edit Feed settings` option within the row-level menu.
-
-![Edit Feed](/slack-administration/feed-overflow-menu.png)
-
-In the Update Feed modal, you'll be able to edit the same values as the [Feed creation settings](#create-a-new-feed).
-
-<Callout type="warning" emoji="⚠️">
-  Updating a Feed's slug will change the URL of the Feed. This will break any
-  links to the Feed that have been shared.
-</Callout>
-
-![Edit Feed Modal](/slack-administration/feed-update-modal.png)
