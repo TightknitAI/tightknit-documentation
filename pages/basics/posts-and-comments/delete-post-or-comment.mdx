@@ -1,3 +1,5 @@
+import { Callout } from "nextra/components";
+
 # Delete a Post or Comment
 
 Once you delete your message in Slack, we'll remove the corresponding post or comment in the Tightknit companion site.
@@ -17,14 +19,12 @@ Deleting a top-level Slack message will remove the corresponding post _and_ its 
 
 Deleting a message reply in Slack will remove only that comment from the Tightknit companion site. The post and the remainder of the comments will be preserved.
 
-import { Callout } from "nextra/components";
-
 <Callout type="info">
-  Deleting the Tightknit bot notification reply will also remove the post and
-  any of its comments from the Tightknit companion site. To stop all bot post
-  replies, enable Quiet Mode.
+  Deleting the Tightknit bot responder's reply is another way to trigger the
+  removal of the post, and any of its comments, from the Tightknit companion
+  site. This reply is only present if the bot responder hasn't been muted.
 </Callout>
 
 ## Message Shortcut: Remove from Tightknit Companion Site Only
 
-If you want to preserve your message in Slack and remove it only from the Tightknit companion site, you can use the Tightknit [message shortcut](../message-shortcuts).
+If you want to preserve your message in Slack and remove it only from the Tightknit companion site, you can use the Tightknit [message shortcut](/basics/message-shortcuts#tightknit-shortcuts).
