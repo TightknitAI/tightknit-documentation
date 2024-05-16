@@ -42,6 +42,13 @@ const config: DocsThemeConfig = {
   },
   sidebar: {
     toggleButton: true,
+    defaultMenuCollapseLevel: 1,
+    titleComponent({ title, type }) {
+      if (type === "separator") {
+        return <span className="cursor-default">{title}</span>;
+      }
+      return <>{title}</>;
+    },
   },
   docsRepositoryBase:
     "https://github.com/TightknitAI/tightknit-documentation/tree/main/",

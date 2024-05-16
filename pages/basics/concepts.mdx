@@ -1,0 +1,21 @@
+# Concepts
+
+Tightknit creates an intuitive mapping of the information in your Slack workspace to the features of your Tightknit community and companion site.
+
+First, let's review some [Slack message terminology](https://api.slack.com/messaging/managing#threading):
+
+> • Before a message has any replies, we call it an **unthreaded message**.<br/>
+> • Once a message has replies, it becomes a **parent message**.<br/>
+> • Any child messages of that parent message are called **threaded replies**.<br/>
+> • The whole bundle of the parent message and replies is referred to as a **thread**.<br/>
+> • Each of the messages within a thread, whether parent or reply, is a **threaded message**.<br/>
+
+We like to call the concepts on the Slack side of things, such as messages and channels, **Slack-isms**.
+So how do we create community features from Slack-isms? Check out this table:
+
+| **Slack-ism**      | **Tightknit Community Feature** |
+| :----------------- | :------------------------------ |
+| Workspace          | Community                       |
+| Channel            | Feed                            |
+| Message (_parent_) | Post                            |
+| Threaded reply     | Comment                         |

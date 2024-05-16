@@ -1,0 +1,45 @@
+import { Callout } from "nextra/components";
+
+# Profile Page
+
+The **Profile detail page** shows the user's info and activity within the community.
+
+Profile detail pages are found at the URL path `/user/<profile-id>`.
+Note that the id belongs to the user's _Tightknit_ profile, not their Slack profile.
+
+Admin users have `ADMIN` badge next to their name.
+Users connected to Slack bots or apps will have an `APP` badge next to their name.
+
+![Profile detail page](/tightknit-site/profile.png)
+
+<Callout type="info">
+  By default, the Tightknit companion site shows the full name from the user's
+  Slack profile. Please contact [Support](mailto:support@tightknit.ai) if you
+  need a different name display style.
+</Callout>
+
+<Callout type="info">
+  Profiles of bot users always display the full bot name and image from Slack.
+  If you prefer that bot profile images instead reflect your community logo,
+  please contact [Support](mailto:support@tightknit.ai).
+</Callout>
+
+## Profile Tabs
+
+### Overview
+
+The **Overview** tab contains a Feed of the user's combine post and comment activity in all Feeds,
+except unlisted Feeds. It also displays certain [profile fields](/companion-site/profiles/profile-fields) from the user's Slack profile.
+
+<Callout>
+  Want to know when a user's profile info is synced from Slack to the companion
+  site? See the [Companion Site Sync Guide ](/basics/companion-site-sync-guide).
+</Callout>
+
+### Posts
+
+The **Posts** tab contains a count of the user's authored posts and a Feed containing the user's post activity in all Feeds.
+
+### Comments
+
+The **Comments** tab contains a count of the user's authored comments and a Feed containing the user's comment activity in all Feeds.

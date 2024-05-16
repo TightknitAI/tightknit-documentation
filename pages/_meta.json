@@ -1,20 +1,27 @@
 {
+  "-- Introduction": {
+    "type": "separator",
+    "title": "Introduction"
+  },
   "index": "Overview",
   "getting-started": "Getting Started",
   "basics": "Basics",
-  "branding": "Branding",
+  "-- Modules": {
+    "type": "separator",
+    "title": "Modules"
+  },
+  "community": "Community",
+  "companion-site": "Companion Site",
+  "channels-and-feeds": "Channels & Feeds",
   "events": "Events",
   "integrations": "Integrations",
-  "tightknit-site": "Tightknit Companion Site",
-  "slack-administration": "Slack Administration",
-  "slack-community-best-practices": "Slack Community Best Practices",
   "contact": {
     "title": "Homepage ↗",
     "type": "page",
     "href": "https://tightknit.ai",
     "newWindow": true
   },
-  "community": {
+  "slack-community": {
     "title": "Community ↗",
     "type": "page",
     "href": "https://community.tightknit.ai",

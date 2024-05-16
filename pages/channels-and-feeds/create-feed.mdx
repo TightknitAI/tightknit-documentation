@@ -1,0 +1,66 @@
+import { Callout } from "nextra/components";
+
+# Create a Feed
+
+<Callout type="info">
+  The Tightknit companion site is required to create Feeds.
+</Callout>
+
+**[Feeds](companion-site/pages/feed)** are the backbone of all posts in your companion site.
+Each Feed is configured to monitor your Slack channel and control when and how messages are posted to the site. Feeds can be managed from the app settings under the `Channels & Feeds` section.
+
+![Tightknit Feed Settings Section](/channels-and-feeds/channel-and-feed-settings.png)
+
+## Access
+
+<Callout type="info">
+  You must first [enable a Slack channel](/channels-and-feeds/enable-channel)
+  with Tightknit before you can create a Feed.
+</Callout>
+
+You have the opportunity to create a Feed during the guided setup to [enable a channel](/channels-and-feeds/enable-channel#enable-a-channel-for-tightknit). You can also create a Tightknit Feed for enabled Slack channel by clicking the `Create Tightknit Feed` option within the row-level menu of the channel settings.
+
+![Create a new Feed](/channels-and-feeds/channel-overflow-menu.png)
+
+## Feed Settings
+
+In the Feed creation modal you can configure the following settings:
+
+- **Selected Channel** - The channel that this Feed will listen to for new messages.
+- **Feed Name** - The name of the Feed.
+- **Feed Slug** - The URL path for the Feed. Keep this short and simple (only use lowercase letters, numbers, or the following characters: `-` and `_`). Try not to change this often as it would break users' existing links and bookmarks.
+- **Preset** - The Tightknit companion site UI display preset for the Feed. This is used during Feed creation to determine default values for display settings such as List View Display and Post Detail Display. The display values can be overridden in the optional settings below.
+
+Additional optional settings:
+
+- **Message Sync Settings** - By default, Tightknit will sync all incoming new Slack messages and replies to the Feed. If you do _not_ want to auto-sync messages (e.g., you prefer to manually sync select posts using the [shortcut](../basics/message-shortcuts#tightknit-shortcuts)), uncheck this option.
+- **Tightknit Responder** - By default, the Tightknit bot will send a public reply on every synced Slack message to notify the user(s) that the thread is now synced to the companion site. You can mute the Tightknit responder to turn off this feature.
+
+  <Callout type="info" emoji="ℹ️">
+    When the Tightknit responder is muted, users will still see ephemeral
+    messages when they perform an action using a [Tightknit
+    shortcut](../basics/message-shortcuts#tightknit-shortcuts).
+  </Callout>
+
+- **SEO Settings** - Feeds that are unlisted are excluded from SEO, i.e. disallowed in `robots.txt` and excluded from sitemaps.
+- **List View Display** - The default display setting for posts in the Feed list view, such as Snippet, Compact, or Card. [Read more](/companion-site/pages/feed#display-settings).
+- **Post Detail Display** - The default display setting for the detail page of posts in this Feed, such as Discussion or Blog. [Read more](/companion-site/pages/post#display-settings).
+- **Emoji Icon** - The emoji icon, such as 📡, that is displayed next to the Feed name in the Tightknit companion site sidebar using the [Noto Emoji Google font](https://fonts.google.com/noto/specimen/Noto+Emoji). If none is set, the sidebar displays a default icon.
+
+  <Callout type="warning" emoji="⚠️">
+    The Noto Emoji Google font has limited support across browsers. We highly
+    recommend testing your choice of emoji in the [Noto Emoji Type
+    tester](https://fonts.google.com/noto/specimen/Noto+Emoji/tester) within the
+    major browsers.
+  </Callout>
+
+- **Navigation Sidebar** - Toggle to show or hide the Feed from navigation menus, including the sidebar on the companion site.
+
+Once you have entered the details of your new Feed, click the `Create` button to create the Feed.
+
+![Feed Create Modal](/channels-and-feeds/feed-create-modal.png)
+
+<Callout>
+  You can create a max of 2 Feeds per Slack workspace. If you need more Feeds,
+  please contact [Support](mailto:support@tightknit.ai).
+</Callout>
