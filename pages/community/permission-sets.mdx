@@ -1,0 +1,31 @@
+import { Callout, Steps } from "nextra/components";
+
+# Permission Sets
+
+A Permission Set is a collection of permissions and priveledges that can be granted to a user (_coming soon_) or a Group.
+
+A user's permissions are calculated as the superset of all Permission Sets assigned to them or assigned to Groups that they are a member of. For example, to have event-related permissions, a user must be a member of at least one Group with an assigned Permission Set containing event permissions.
+
+## How to Access
+
+![Permission Sets Button](/community/community-module.png)
+
+Admins can access Permission Sets settings by clicking the `Permission Sets` button under the **Community** module section:
+
+<Callout type="info">This location may change soon.</Callout>
+
+![Permission Sets List](/community/permission-sets/permission-sets-list.png)
+
+From the Permission Sets List panel, admins are able to view, manage, and create Permission Sets.
+
+## Create a Permission Set
+
+To create a new Permission Set, click the `Create Permission Set` button. Within the Permission Set creation modal, you can configure the following:
+
+- **Name** - the name associated with your Permission Set
+- **Permissions** - list of permissions enabled for this set
+  - **Events Champion** - the user has the ability to draft new events, submit them for admin approval, edit their own events, and delete their own events. They will also be able to access `Events` from the app home.
+
+<Callout type="info">More permissions coming soon!</Callout>
+
+![Create Permission Set](/community/permission-sets/create-permission-set-modal.png)
