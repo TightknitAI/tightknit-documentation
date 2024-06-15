@@ -2,10 +2,71 @@ import { Callout, Steps } from "nextra/components";
 
 # Groups
 
-Within the Permission Sets modal, you can configure the following:
+A Group is a collection of Slack users. Groups are useful for managing large numbers of users at once, mass DMs (_coming soon_), assignments to other areas of the Tightknit platform, and more!
+
+<Callout type="info">Groups support up to 30 members each.</Callout>
+
+<Callout>
+**Terminology**: 
+Note that Tighknit Groups are distinct from Slack's ["user
+groups"](https://slack.com/help/articles/212906697-Create-a-user-group) (a feature only on paid Slack Pro plans). For the purposes of this article, every
+time we mention "Group" we are referring to the Tightknit feature.
+
+</Callout>
+
+## How to Access
 
 ![Groups Button](/community/community-module.png)
 
+Admins can access Groups settings by clicking the `Groups` button under the **Community** module section:
+
+<Callout type="info">This location may change soon.</Callout>
+
+![Groups List](/community/groups/groups-list.png)
+
+From the Groups List panel, admins are able to view, manage, and create Groups.
+
+## Create a Group
+
 ![Create Group Modal](/community/groups/create-group-modal.png)
+
+To create a new Group, click the `Create Group` button. Within the Group creation modal, you can configure the following:
+
+- **Name** - the name associated with the Group
+- **Group Members** - list of up to 30 users that are members of the Group
+- **Permission Set** - assign a [Permission Set](/community/permission-sets) to the Group; all members of the group inherit the permissions of the Permission Set
+- **Send Notification** - when checked, new users that have been added to the Group during this session will receive a private notification DM. The DM informs the new member of their membership in the group, as well as onboarding materials for any permissions they have inherited through the associated Permission Set, if any (_see below for example_). Pre-existing members of the Group will not receive another notification if they were previously added. Members that were removed from the Group are not notified of the change.
+
+![Group Membership DM](/community/groups/group-membership-dm.png)
+
+## View Group Members
+
+To view all the members of a group, find your group in the Groups List Panel, and select the `View Members` option from the dropdown menu.
+
 ![Group Members Modal](/community/groups/group-members.png)
-![Groups List Modal](/community/groups/groups-list.png)
+
+## Guide: Create a Group of Events Champions
+
+It's important to create [Events](/events/getting-started) for your community, but that can be a lot of hard work for just one admin user. Are you ready to delegate some of that power to certain superusers or ambassadors? It's easy with Groups + Permission Sets!
+
+<Steps>
+
+### Create a Permission Set
+
+Open the [Create Permission Set panel](/community/permission-sets#create-a-permission-set) to create a new Permission Set. Give it a name like "Event Champion Permissions" and check the box for **Events Champion**. Click `Create`.
+
+![Create Permission Set](/community/permission-sets/create-permission-set-modal.png)
+
+Any user or Group that is assigned this Permission Set will have the ability to draft/edit/delete their own events in the community. We'll assign this to a Group in the next step.
+
+### Create a Group
+
+Open the [Create Group](#create-a-group) panel to create a new Group. Give it a name like "Event Champions". Add your designated superusers in your community that you trust with the ability to manage events in your community. Select your Permission Set you created in the previous step. You may optionally send these users a notification about being added to the group (_recommended_).
+
+Click `Save`.
+
+![Event Champions Group](/community/groups/event-champions.png)
+
+</Steps>
+
+And that's it! Users which are members of your new Group now have the ability to manage their own events in Tightknit! 🤘
