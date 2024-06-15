@@ -2,6 +2,8 @@
   "getting-started": "Getting Started",
   "manage-community": "Manage Community Details",
   "slack-invite-link": "Slack Invite Link",
+  "permission-sets": "Permission Sets",
+  "groups": "Groups",
   "onboarding": "New Member Onboarding",
   "admin-settings": "Admin Settings"
 }
