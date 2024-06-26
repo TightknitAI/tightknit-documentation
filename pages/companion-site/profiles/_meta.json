@@ -1,6 +1,6 @@
 {
-  "directory": "Directory",
-  "leaderboard": "Leaderboard",
-  "profile-fields": "Profile Fields",
+  "directory": "Directory Settings",
+  "leaderboard": "Leaderboard Settings",
+  "profile-fields": "Profile Field Settings",
   "allowed-bots": "Allowed Bot Profiles"
 }
