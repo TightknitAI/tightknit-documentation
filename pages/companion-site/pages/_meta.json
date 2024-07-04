@@ -5,5 +5,7 @@
   "leaderboard": "Leaderboard page",
   "feed": "Feed page",
   "post": "Post page",
-  "profile": "Profile page"
+  "profile": "Profile page",
+  "events-list": "Events List page",
+  "event": "Event page"
 }
