@@ -2,23 +2,24 @@ import { Callout } from "nextra/components";
 
 # Profile Fields
 
-In the `Profile Fields` modal, you can configure which fields are displayed on the [member profile page](/companion-site/pages/profile).
+In the `Profile Fields` modal, you can configure the visibility and privacy settings for fields displayed on the [member profile page](/companion-site/pages/profile).
+
+Within the Profile Fields modal, you can configure:
+
+- **Profile Fields: Public** - fields that are visible to all visitors of the companion site.
+- **Profile Fields: Restricted to Members** - fields that are only visible to authenticated users (_coming soon_), and shows "🔒 Restricted to Members" to all other visitors. The name of the field (e.g. "Title") will be visible.
+
+There cannot be overlapping fields between the Public and Restricted field sets.
 
 ![Tightknit Profile Fields Settings](/tightknit-site/profiles/profile-fields-modal.png)
 
-These profile fields are populated from the Slack profile fields that are configured in the Slack workspace.
-Only active profile fields will be displayed on the modal for selection.
+These profile fields are populated from the profile fields that are configured in the Slack workspace.
+Only active Slack profile fields are shown as options for Tightknit.
 
 You can configure these fields in the Slack workspace by going to `Customize Workspace` > `Profiles`.
-Go [here](https://slack.com/help/articles/212281478-Customize-member-profiles) to learn more.
+[Click here](https://slack.com/help/articles/212281478-Customize-member-profiles) to learn more.
 
 <Callout type="warning" emoji="⚠️">
   **Known Limitation**: Tightknit currently supports Text, Link, and Date
   profile field types.
-</Callout>
-
-<Callout type="warning" emoji="⚠️">
-  **Known Limitation**: Currently we can only show 10 profile fields on this
-  panel. If you have more than 10 profile fields, please reach out to
-  [Support](mailto:support@tightknit.ai).
 </Callout>
