@@ -1,0 +1,27 @@
+import { Callout } from "nextra/components";
+
+# Profile Settings
+
+In the `Profile Settings` modal, you can configure global settings related to user profiles on the companion site, including:
+
+- **Profile Name Display** - Control how your users' names are displayed on the companion site
+
+![Tightknit Profile Settings](/tightknit-site/profiles/profile-settings-modal.png)
+
+## Profile Name Display
+
+- Display Name - the user's display name in Slack (e.g. Johnny Nickname)
+  ![Profile Name Display - Slack Display Name](/tightknit-site/profiles/profile-name-display-name.png)
+- First Name, Last Initial - the user's first name and last initial in Slack (e.g. John D.)
+  ![Profile Name Display - First Name, Last Initial](/tightknit-site/profiles/profile-name-first-last-initial.png)
+- Real Name - the user's full name in Slack (e.g. John Doe)
+  ![Profile Name Display - Slack Real Name](/tightknit-site/profiles/profile-name-real-name.png)
+- Slack User ID - the id of the user in Slack (e.g. U12345678)
+  ![Profile Name Display - Slack User Id](/tightknit-site/profiles/profile-name-slack-id.png)
+
+Generally speaking, if the user has not set that particular name field (e.g., they have no Display Name in Slack), then the companion site mirrors Slack behavior. The display name falls back to the user's real name.
+
+<Callout type="info" emoji="💡">
+  Updating all the display name for all users can take several minutes for large
+  communities.
+</Callout>
