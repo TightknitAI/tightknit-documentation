@@ -1,4 +1,5 @@
 import { Steps, Tabs, Cards, Card } from "nextra/components";
+import { Callout } from "nextra/components";
 
 # Event Registration
 
@@ -15,6 +16,15 @@ When you create or edit an event, you will be able to configure registration set
 - **Webhook Custom Metadata** - this value is included as a string in the `custom_metadata` field of the payload sent to the events registration webhook. Can be used to configure [one-click registration](#one-click-registration) by including metadata from a third-party event system.
 
 ![Event Registration Settings](/events/event-registration-settings.png)
+
+<Callout>
+  **Recommendation**: If your event is hosted entirely through Tightknit in
+  Slack and you want your companion site to direct users into Slack for
+  registration, we recommend using the copying the link of the event
+  announcement message in Slack and using it as the event link in Tightknit. You
+  can find message links in Slack by hovering over the message, clicking the `⋮`
+  menu, and selecting `Copy link`.
+</Callout>
 
 ## Events Webhook
 
