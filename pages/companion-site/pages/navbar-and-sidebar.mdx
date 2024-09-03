@@ -7,9 +7,10 @@ The pages within your Tightknit companion site are organized as follows:
 <FileTree>
   <FileTree.Folder name="pages" defaultOpen>
     <FileTree.File name="/" />
-    <FileTree.Folder name="/members">
-      <FileTree.File name="/leaderboard" />
-      <FileTree.File name="/directory" />
+    <FileTree.File name="/leaderboard" />
+    <FileTree.File name="/directory" />
+    <FileTree.Folder name="/events" defaultOpen>
+      <FileTree.File name="/events/<event-id>/<event-slug>" />
     </FileTree.Folder>
     <FileTree.Folder name="/x/<feed-slug>" defaultOpen>
       <FileTree.File name="/<post-id>/<post-slug>" />
@@ -22,13 +23,13 @@ The pages within your Tightknit companion site are organized as follows:
 
 ## Navbar Header
 
-The navbar header will contain your community logo, name, and the call-to-action button.
+The navbar header will contain your site logo and the call-to-action button. The logo will be the [Site Horizontal Logo](/companion-site/branding), if configured, otherwise the Site Icon alongside the name of the site.
 
-![Community navbar header](/tightknit-site/navbar.png)
+![Site navbar header](/tightknit-site/navbar.png)
 
 ### Call-to-Action Button
 
-![Community Call-to-action button](/tightknit-site/CTAButton.png)
+![Site Call-to-action button](/tightknit-site/CTAButton.png)
 
 The Call-to-action button is featured not just in the navbar but across the website experience, especially in places where interactivity is not allowed unless the user joins the Slack workspace.
 
@@ -43,7 +44,7 @@ The navigation sidebar contains links to all [Feeds](./feed), except hidden Feed
 - [Leaderboard](./leaderboard)
 - Events
 
-![Community sidebar](/tightknit-site/pages/sidebar.png)
+![Site sidebar](/tightknit-site/pages/sidebar.png)
 
 The Feed navigation items will display the emoji icon using the [Noto Emoji Google font](https://fonts.google.com/noto/specimen/Noto+Emoji), if any are configured for the Feed ([instructions](/channels-and-feeds/manage-feeds)), or falls back to a default icon.
 
