@@ -7,10 +7,76 @@ import { Callout } from "nextra/components";
   participate, please contact [Support](mailto:support@tightknit.ai).
 </Callout>
 
-Ready to build a culture of reward and recognition in your community?
+## Administration
 
-### Accessing Badges
-
-Users can access the module in the Tightknit app home under the **Gamification** module section.
+Admin users can manage their Badges and Badge settings under the **Gamification** section in the Tighktnit app home.
 
 ![Gamification Module](/gamification/gamification-module.png)
+
+### Create a New Badge
+
+To create a new Badge, click the `Badges` button in the Gamification module to access the **Manage Badges** panel. This panel contains all Badges available in the community.
+
+![Manage Badges Modal](/gamification/badges/manage-badges-modal.png)
+
+Click `Create Badge` button to access the Badge creation modal, where you can configure the following:
+
+- **Name** - the name of the Badge
+- **Badge Image** - the image of the Badge
+- **Badge Description** - the description of the Badge, such as its purpose and under which conditions it is awarded to a user
+- **Default Award Message** - the default message included when the Badge is sent to a user; this can be overridden when the user is sending the Badge
+- **Badge Frame (Image)** - the Badge frame overlay is an image that members can use to generate a framed profile photo once they have earned the Badge. Recommended format for Badge frame images is 512 x 512 px PNG files. The frame visual should be a square border with a transparent center. We recommend making all your Badge frames the same size and shape so that users can easily generate new frames repeatedly on top of their profile photos.
+  ![Manage Badges Modal](/gamification/badges/badge-frame.png)
+- **Milestone** - (_optional_) automatically award this Badge to users that have achieved the selected [Milestone](/gamification/milestones)
+
+![Create Badge Modal](/gamification/badges/create-badge-modal.png)
+
+### Send a Badge
+
+To give a Badge to a member of the community, you can click the `Give Badge` button under the **Gamification** section in the app home. Alternatively, you can find the Badge in the Manage Badges panel, click the menu button `•••`, and select the `Give badge` option.
+
+![Give Badge Option](/gamification/badges/give-badge-option.png)
+
+From here you will be able to select the user(s) receiving the Badge and the message sent with the award.
+
+![Give Badge Modal](/gamification/badges/give-badge-modal.png)
+
+#### Send a Test Badge
+
+Want to test out what it's like to receieve a Badge yourself? No problem! In the Manage Badges panel, click the menu button `•••`, and select the `Send test badge to myself` option.
+
+![Send Test Badge To Myself Option](/gamification/badges/send-test-badge-option.png)
+
+## Earned Badges
+
+### Viewing My Badges
+
+Use the global shortcut `/badges` to open to the **My Badges** modal. The shortcut option will appear as you type /badges into the search bar or any conversation message.
+
+![Badges Shortcut](/gamification/badges/badges-global-shortcut.png)
+
+Alternatively, non-admin users can view the Badges they have earned under the **My Badges** section in the Tightknit app home.
+
+![My Badges Module](/gamification/badges/my-badges-module.png)
+
+### Receiving a Badge
+
+When a user receives a Badge, they get a private notification message containing the user that sent the Badge (unless sent anonymously), the award message, the Badge image, and the description.
+
+![Recipient of a badge](/gamification/badges/badge-recipient.png)
+
+#### Generate a Framed Profile Photo
+
+Badge recipients will have the option to generate a profile photo for any earned Badges that are configured with a frame image. When a user clicks the `Generate Profile Photo`, we generate a framed profile photo using their current photo overlaid with the Badge frame image.
+
+![Badge Framed Profile Photo](/gamification/badges/badge-framed-profile-photo.png)
+
+We also generate a Badge award image that can be shared in a social media announcement.
+
+![Badge Award social media image](/gamification/badges/badge-social-share.png)
+
+#### Fixing Duplicate Badge Frame Profile Photos
+
+We recommend making sure you have a fresh profile photo before generating a new one with a Badge frame. Otherwise, you could overlay one Badge-framed photo on top of another in a way that doesn't look very good! Don't worry - it's easy to fix.
+
+Follow this [guide](https://slack.com/help/articles/204092246-Edit-your-profile) to edit your Profile and upload a new profile photo using your original photo with no frame. Then try again!
