@@ -1,7 +1,21 @@
 # Admin Settings
 
-In the Admin Settings, you can configure the following:
-
-- **Tightknit Hub Channel** - the Hub channel is where Tightknit sends important notifications, analytics, and alerts about your community. You can switch this to any private channel, and Tightknit will start sending updates to that channel instead. The channel cannot have a Tightknit Feed connected to it.
-
 ![Tightknit Community Admin Settings](/community/admin-settings.png)
+
+## Tightknit Hub Channel
+
+The **Tightknit Hub Channel** is where Tightknit sends important notifications, analytics, and alerts about your community. You can switch this to any private channel, and Tightknit will start sending updates to that channel instead. The selected channel cannot have a Tightknit Feed connected to it.
+
+### Troubleshooting
+
+During the onboarding process, Tightknit will attempt to create a new private channel called `#tightknit-hub`. This operation, and attempting to switch the Hub channel, can fail for several reasons depending on your workspace settings:
+
+1. Users are restricted from creating public / private channels
+2. The Tightknit app is not inside the private channel
+
+You can proceed with either of the following options:
+
+**A.** Allow Tightknit to create private channels by [adjusting your workspace channel management permissions](https://slack.com/help/articles/115004988303-Adjust-channel-management-permissions). Then visit the Home tag of the Tightknit app, and click the `🔧 Setup Hub Channel` button in the Community settings section.
+
+**B.** Manually configure the Tightknit Hub be a channel of your choice. We recommend creating a new private channel called `tightknit-hub`, but any private channel will do. Make sure the Tightknit app is added as an integration to your channel.
+When your channel is ready, you can configure the Tightknit hub by visiting the Tightknit app home and clicking the `Admin Settings` button in the Community settings section.
