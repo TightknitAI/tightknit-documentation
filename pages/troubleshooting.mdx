@@ -1,0 +1,24 @@
+# Troubleshooting
+
+The following sections can help you troubleshoot some common issues that you might encounter.
+
+## Troubleshooting Issues
+
+### My Slack message didn't sync to the companion site
+
+First, confirm that the [sync settings on the Feed](/channels-and-feeds/create-feed#feed-settings) match your expectations. If you want all messages automatically synced, ensure the auto-sync setting is checked.
+
+Second, try using the Tightknit [message shortcut](/basics/message-shortcuts) to post the message to the companion site. It is safe to remove and post messages to the site using the message shortcut multiple times.
+
+### The Tightknit bot didn't use `@everyone`, `@channel`, or `@here` correctly in its message
+
+This commonly occurs in the #general channel (you may have renamed it), which is the Slack channel all members are required to join. This channel has special permissions for who can post and who can use `@everyone`, `@channel`, or `@here` mentions ([read more↗](https://slack.com/help/articles/360004635551-Manage-channel-posting-permissions#manage-who-can-notify-a-channel)).
+
+Ensure that the **Tightknit** app is allowed to post in this channel, with the mentions enabled. You can find these settings by clicking on the channel name, selecting the **Settings** tab, and editing **Posting permissions**. Under the **Admins, plus specific people** option, add the Tightknit app, and check the box to "_Allow @everyone, @here and @channel mentions
+@everyone_". Click **Save Changes**.
+
+![Channel posting permissions](/troubleshooting/channel-posting-permissions.png)
+
+## Contacting Support
+
+If you are experiencing difficulties, please contact [Support](mailto:support@tightknit.ai). You may also try posting in our [Community ↗](https://community.tightknit.ai), which typically has faster response times.

@@ -16,6 +16,12 @@
   "events": "Events",
   "gamification": "Gamification",
   "integrations": "Integrations",
+
+  "--": {
+    "type": "separator"
+  },
+  "troubleshooting": "Troubleshooting",
+
   "contact": {
     "title": "Homepage ↗",
     "type": "page",
