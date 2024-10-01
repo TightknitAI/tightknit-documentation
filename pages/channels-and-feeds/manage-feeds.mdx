@@ -4,7 +4,7 @@ import { Callout } from "nextra/components";
 
 ### Update an Existing Feed
 
-To edit an existing Feed, click the `Edit Feed settings` option within the row-level menu.
+To edit an existing Feed, click the `Feed Settings` option within the `•••` dropdown menu.
 
 ![Edit Feed](/channels-and-feeds/feed-overflow-menu.png)
 
@@ -16,3 +16,22 @@ In the Update Feed modal, you'll be able to edit the same values as the [Feed cr
 </Callout>
 
 ![Edit Feed Modal](/channels-and-feeds/feed-update-modal.png)
+
+### Archive Feed
+
+To archive a Feed, select the `Archive Feed` option within the `•••` dropdown menu for an active Feed. Archived Feeds are no longer active and will no longer sync content from Slack to the Companion Site. Archived Feeds do not count towards your active Feeds limit.
+
+To un-archive a Feed, select the `Unarchive Feed` option within the `•••` dropdown menu for an archived Feed. You can only unarchive a Feed if you are within your active Feeds limit.
+
+![Archive Feed](/channels-and-feeds/archive-feed.gif)
+
+### Deactivate Tightknit within Channel
+
+<Callout type="info">
+  If the Slack channel is connected to an active Feed, you must first archive
+  the Feed before deactivating the channel.
+</Callout>
+
+To deactivate the Tightknit app within one of your activated Slack channels, select the `Deactivate Channel` option within the `•••` dropdown menu for the channel. The app will no longer be integrated in this channel, and Tightknit features will not be available. The channel will no longer count toward your Tightknit-activated channels limit. Deactivation is solely related to Tightknit and has no other effect on the functioning of the Slack channel itself.
+
+To re-activate a channel, simply repeat the steps to [activate the channel for Tightknit](/channels-and-feeds/activate-channel).

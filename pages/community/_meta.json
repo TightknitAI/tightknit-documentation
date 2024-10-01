@@ -1,10 +1,10 @@
 {
   "getting-started": "Getting Started",
-  "manage-community": "Manage Community Details",
+  "manage-community": "Managing the Community",
   "community-images": "Community Images",
   "slack-invite-link": "Slack Invite Link",
   "permission-sets": "Permission Sets",
   "groups": "Groups",
   "onboarding": "New Member Onboarding",
-  "admin-settings": "Admin Settings"
+  "notification-settings": "Notification Settings"
 }
