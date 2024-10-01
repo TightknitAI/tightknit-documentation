@@ -12,7 +12,7 @@ When you create or edit an event, you will be able to configure registration set
 - **Show registration button for event** - enables users to register for the event
 - **Use Event Link for registration button** - when enabled, the registration button will redirect users to the URL provided in the _Link_ field. The link will no longer be shown in the event body. You must have the registration button enabled and a URL defined in the event _Link_ field.
 - **Make guest list and guest count public** - when enabled, all users are able to see the number of attendees and the guest list for published events
-- **Webhook for Registration Data** - the webhook endpoint to send [registration data](#events-webhook) to. Each time a user changes their registration for this event (i.e. registers / unregisters), a request is sent to the specified webhook.
+- **Enable Webhooks** - when enabled, actions related to this Event are emitted to all subscribed [webhooks](/integrations/webhooks)
 - **Webhook Custom Metadata** - this value is included as a string in the `custom_metadata` field of the payload sent to the events registration webhook. Can be used to configure [one-click registration](#one-click-registration) by including metadata from a third-party event system.
 
 ![Event Registration Settings](/events/event-registration-settings.png)
@@ -28,7 +28,7 @@ When you create or edit an event, you will be able to configure registration set
 
 ## Events Webhook
 
-Each time a user registers or unregisters for a Tightknit event in Slack, we send information about the registration event to your webhook URL.
+Each time a user registers or unregisters for a Tightknit event in Slack, we send information about the registration action to your subscribed webhooks.
 
 The payload includes the action and status (e.g. `registered` vs `unregistered`), information about the Tightknit event, information about the user, the source of the interaction, and the event's custom metadata (if configured). The user info also includes [custom profile fields](https://slack.com/help/articles/212281478-Customize-member-profiles) configured for Slack profiles in the workspace.
 
