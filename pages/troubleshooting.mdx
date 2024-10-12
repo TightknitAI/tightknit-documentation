@@ -4,7 +4,9 @@ The following sections can help you troubleshoot some common issues that you mig
 
 ## Troubleshooting Issues
 
-### My Slack message didn't sync to the companion site
+### 🌐 Companion Site
+
+#### My Slack message didn't sync to the companion site
 
 First, confirm that the [sync settings on the Feed](/channels-and-feeds/create-feed#feed-settings) match your expectations. If you want all messages automatically synced, ensure the auto-sync setting is checked.
 
@@ -16,7 +18,13 @@ If you are still experiencing issues, check if your situation falls into any of 
 - Are you using an app that posts on your users' behalf (e.g. Pylon, Channeled, Intercom)? [Add that app as an **Allowed Bot**](companion-site/profiles/allowed-bots).
 - Are you trying to sync a message in a Slack Connect channel or a message sent by a user in an external workspace? Tightknit currently does not support Slack Connect or external users.
 
-### The Tightknit bot didn't use `@everyone`, `@channel`, or `@here` correctly in its message
+#### My custom Slack emojis are missing on the companion site
+
+If your Slack custom emojis are not displaying images or are appearing in text format on the companion site, like `:my-emoji:`, you may need to re-sync your emojis with Tightknit. To do this, simply [re-install the Tightknit app](/getting-started#reinstalling-the-slack-app).
+
+### 📱 Slack App
+
+#### The Tightknit bot didn't use `@everyone`, `@channel`, or `@here` correctly in its message
 
 This commonly occurs in the #general channel (you may have renamed it), which is the Slack channel all members are required to join. This channel has special permissions for who can post and who can use `@everyone`, `@channel`, or `@here` mentions ([read more↗](https://slack.com/help/articles/360004635551-Manage-channel-posting-permissions#manage-who-can-notify-a-channel)).
 
@@ -25,7 +33,7 @@ Ensure that the **Tightknit** app is allowed to post in this channel, with the m
 
 ![Channel posting permissions](/troubleshooting/channel-posting-permissions.png)
 
-### Tightknit failed to create / switch the Hub channel
+#### Tightknit failed to create / switch the Hub channel
 
 This can occur during Community creation onboarding or when trying to switch the Tightknit Hub Channel. Please see [Tightknit Hub Channel troubleshooting](/community/admin-settings#troubleshooting) for details.
 
