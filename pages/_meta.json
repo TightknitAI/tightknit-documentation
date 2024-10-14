@@ -18,6 +18,12 @@
   "gamification": "Gamification",
   "integrations": "Integrations",
 
+  "-- Productivity Tools": {
+    "type": "separator",
+    "title": "Productivity Tools"
+  },
+  "slack-administration": "Slack Administration",
+
   "--": {
     "type": "separator"
   },
