@@ -1,0 +1,31 @@
+import { Callout } from "nextra/components";
+
+# Agent Settings
+
+## Accessing Settings
+
+To access the Agent settings for a channel, select the `Agent Settings` option in the dropdown menu of the channel settings.
+
+![Agent Settings menu option](/channels-and-feeds/agents/agent-settings-option.png)
+
+## Agents
+
+The following Agents are available for each channel:
+
+- Post Sync Reminder Agent
+- Related Discussions Agent [✨AI]
+- AI Answers Agent [✨AI] (_coming soon!_)
+
+### Post Sync Reminder Agent
+
+When a message is synced to the Companion Site as a post, the **Post Sync Reminder Agent** adds a reply to the thread with a link to the post and a reminder that all further replies are synced to the site.
+
+![Post Sync Reminder Agent message](/channels-and-feeds/agents/post-sync-reminder-agent.png)
+
+### Related Discussions Agent
+
+Each time a message is sent, our Tightknit AI finds other related messages within the same channel, and the **Related Discussions Agent** replies with links to the discussions. If the related message has been synced to the Companion Site, the result is linked to the URL of the post on the site; otherwise, it is linked to the Slack message directly.
+
+You can customize the text of the message sent by the agent that precedes the results. In the example below, the preface text is "_▶︎ Related Discussions_".
+
+![Related Discussions Agent message](/channels-and-feeds/agents/related-discussions-agent.png)

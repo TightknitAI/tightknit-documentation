@@ -2,5 +2,6 @@
   "getting-started": "Getting Started",
   "activate-channel": "Activate a Channel",
   "create-feed": "Create a Feed",
-  "manage-feeds": "Manage Feeds"
+  "manage-feeds": "Manage Feeds",
+  "agent-settings": "Agent Settings"
 }
