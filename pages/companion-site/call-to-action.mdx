@@ -1,10 +1,40 @@
 import { Callout, Steps } from "nextra/components";
 
-# Call to Action Button
+# Call to Action
 
-Within the Call-to-action Button settings modal, you can configure the following:
+Within the Call-to-action settings modal, you can configure the following:
 
-- **Call-to-Action Text** - This is the text that is present on the Slack button [across the Tightknit companion site experience](/companion-site/pages/navbar-and-sidebar#navbar-header). If you do not wish to show this button, leave this field empty.
-- **Call-to-Action URL** - This is the URL that the Slack button will link to when clicked. By default, it is the `/join` page of your community. We strongly recommend you keep this setting, since the `/join` URL will automatically redirect to your [Slack invite link](/community/slack-invite-link) and capture useful metrics.
+- **Call-to-Action Text** - This is the text that is present on the Call-to-Action button [across the Tightknit companion site experience](/companion-site/pages/navbar-and-sidebar#navbar-header). If you do not wish to show this button, leave this field empty.
+- **Call-to-Action URL** - This is the URL that the button will link to when clicked. By default, it is the `/join` URL of your site. [Read More↗](#static-join-link)
 
-![Tightknit Companion Site Settings Modal](/tightknit-site/site-call-to-action-button-modal.png)
+## Advanced Settings
+
+### Static Join Link
+
+Each Companion Site has a `/join` URL that is inactive unless you have registered a Static Join Link with Tightknit. Once you have provided a join link, for example `https://www.how-to-join-my-community.com`, then users that visit the `/join` URL on your site will now be redirected to `https://www.how-to-join-my-community.com`.
+
+What's the purpose of this? Well, the method to join your community could change over time. One day you may use a Slack invite link to let users directly join the workspace; but later, might may instead want to lead users to an initial sign-up form. Regardless, the `/join` URL of your Companion Site stays the same (_and looks nice!_). This way, you can always give the `/join` URL to prospective community members, such as in outbound emails, and safely change the redirect URL behind the scenes at any point in the future. Tightknit will also track the number of visitors to the `/join` URL.
+
+![Community Settings Section](/tightknit-site/call-to-action/join-link-diagram.png)
+
+#### Slack Invite Link
+
+To let users join your workspace directly, we recommend using your Slack invite link. You can find your invite link [here](https://slack.com/help/articles/201330256-Invite-new-members-to-your-workspace#share-an-invitation-link).
+
+<Callout type="info">
+  Each admin user in the workspace can generate their own unique shared invite
+  link. You can register any of those links with Tightknit.
+</Callout>
+
+<Callout type="info" emoji="⚠️">
+  A Slack invitation link expires after it is used for 400 successful sign-ups.
+  You must then [generate a new link](#generate-a-new-invite-link) and register
+  it again with Tightknit. Don't worry — we'll remind you when you're nearing
+  the limit!
+</Callout>
+
+#### Generating a new Slack invite link
+
+Is your link expired or expiring? Go into your Slack workspace admin settings. Select the "Invitations" page under the administration menu, i.e., the URL is at `/admin/invites`. Click on the "Invite Links" tab. Find the user whose link was registered with Tightknit and click "Deactivate."
+
+Now, simply [repeat the process to generate an invite link](https://slack.com/help/articles/201330256-Invite-new-members-to-your-workspace#share-an-invitation-link). Don't forget to register again it with Tightknit!

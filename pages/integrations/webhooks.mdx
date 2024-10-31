@@ -1,4 +1,4 @@
-import { Callout } from "nextra/components";
+import { Steps, Tabs, Callout, Cards, Card } from "nextra/components";
 
 # 🪝 Webhooks
 
@@ -14,13 +14,11 @@ Admins can view and register their webhooks with Tightknit by clicking the `Webh
 
 Click the `+ Create Webhook` button to register your webhook with Tightknit. Once registered, you will be able to use this webhook as a data endpoint within various other Tightknit modules.
 
-![Create webhook modal](/integrations/webhooks/create-webhook-modal.png)
-
 Webhooks require the following fields:
 
 - **Name** - a helpful name to identify your webhook
 - **URL** - the URL endpoint for your webhook
-- **Subscriptions** - the events or actions that your webhook listens for
+- **[Subscriptions](#subscriptions)** - the events or actions that your webhook listens for
 
 ## Delete a Webhook
 
@@ -28,8 +26,170 @@ Webhooks require the following fields:
 
 To delete a webhook, click the `•••` next to the list item and select the `Delete` option.
 
-<Callout type="warning">
+<Callout type="info">
   You will be restricted from deleting a webhook if it is currently in use
   within a Tightknit module. You must remove all references to the webhook
   before you can delete it.
 </Callout>
+
+## Subscriptions
+
+Your webhook can subscribe, or listen, to any number of events emitted by Tightknit. The following events are currently supported.
+
+### Calendar Events
+
+Actions emitted related to [Calendar Events](/events/getting-started) (_not to be confused with webhook "events"_).
+
+#### Event User Registration
+
+Emitted when a user registers for a Calendar Event. Includes the "[Webhook Custom Metadata](/events/event-registration#event-settings)" in the `custom_metadata` field, if configured for the Calendar Event.
+
+<Tabs items={['API', 'Example']}>
+<Tabs.Tab>
+```
+{
+  version: string;
+  action: string;
+  status: 'registered';
+  date: string;
+  custom_metadata?: string | null;
+  event: {
+    id: string;
+    title: string;
+    slug: string;
+  };
+  source: {
+    slack_workspace_id: string;
+    slack_channel_id?: string;
+  };
+  user: {
+    id: string;
+    first_name: string;
+    last_name: string;
+    real_name: string;
+    display_name: string;
+    email: string;
+    profile_fields: {
+      [FIELD_API_NAME]: {
+        label: string;
+        value: string;
+      };
+    };
+  };
+}
+```
+</Tabs.Tab>
+<Tabs.Tab>
+```
+{
+  version: "1.0",
+  action: "event_registration_status_change",
+  date: "2024-05-02T03:33:35.052Z",
+  status: "registered",
+  custom_metadata: null,
+  event: {
+    id: "s46on9pp403o",
+    title: "Tech Talk: Save Time Saving",
+    slug: "talk-save-time-saving"
+  },
+  source: {
+    slack_workspace_id: "T010ABCDEF",
+    slack_channel_id: "C064T2GAZD9"
+  },
+  user: {
+    id: "U01234ABCD",
+    first_name: "Ozzy",
+    last_name: "Otter",
+    real_name: "Ozzy Otter",
+    display_name: "Ozzy the Otter",
+    email: "ozzy@otters.com",
+    profile_fields: {
+      Xf060Z34JTHZ: {
+        label: "Favorite Movie",
+        value: "Groundhog Day"
+      }
+    }
+  }
+}
+```
+
+</Tabs.Tab>
+</Tabs>
+
+#### Event User Un-registration
+
+Emitted when a user un-registers from a Calendar Event. Includes the "[Webhook Custom Metadata](/events/event-registration#event-settings)" in the `custom_metadata` field, if configured for the Calendar Event.
+
+<Tabs items={['API', 'Example']}>
+<Tabs.Tab>
+```
+{
+  version: string;
+  action: string;
+  status: 'unregistered';
+  date: string;
+  custom_metadata?: string | null;
+  event: {
+    id: string;
+    title: string;
+    slug: string;
+  };
+  source: {
+    slack_workspace_id: string;
+    slack_channel_id?: string;
+  };
+  user: {
+    id: string;
+    first_name: string;
+    last_name: string;
+    real_name: string;
+    display_name: string;
+    email: string;
+    profile_fields: {
+      [FIELD_API_NAME]: {
+        label: string;
+        value: string;
+      };
+    };
+  };
+}
+```
+</Tabs.Tab>
+<Tabs.Tab>
+```
+{
+  version: "1.0",
+  action: "event_registration_status_change",
+  date: "2024-05-02T03:33:35.052Z",
+  status: "unregistered",
+  custom_metadata: null,
+  event: {
+    id: "s46on9pp403o",
+    title: "Tech Talk: Save Time Saving",
+    slug: "talk-save-time-saving"
+  },
+  source: {
+    slack_workspace_id: "T010ABCDEF",
+    slack_channel_id: "C064T2GAZD9"
+  },
+  user: {
+    id: "U01234ABCD",
+    first_name: "Ozzy",
+    last_name: "Otter",
+    real_name: "Ozzy Otter",
+    display_name: "Ozzy the Otter",
+    email: "ozzy@otters.com",
+    profile_fields: {
+      Xf060Z34JTHZ: {
+        label: "Favorite Movie",
+        value: "Groundhog Day"
+      }
+    }
+  }
+}
+```
+
+</Tabs.Tab>
+</Tabs>
+
+<Callout type="info">_More subscription events coming soon!_</Callout>
