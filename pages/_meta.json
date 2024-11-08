@@ -22,7 +22,8 @@
     "type": "separator",
     "title": "Productivity Tools"
   },
-  "slack-administration": "Slack Administration",
+  "channel-inviter": "Channel Inviter",
+  "polls": "Polls",
 
   "--": {
     "type": "separator"

@@ -1,0 +1,50 @@
+# Polls
+
+Create quick and easy polls in Slack for community members to engage in. In the chat or search bar, type the `/poll` command to get started.
+
+![Polls command](/productivity-tools/polls/polls-command.png)
+
+## Creating a Poll
+
+![Polls example](/productivity-tools/polls/polls-example.png)
+
+In the Poll creation modal you can configure the following settings:
+
+- **Selected Channel** - The channel that the Poll will be posted in.
+- **Poll Question** - The primary question or topic for the Poll that users will be voting on.
+- **Poll Choices** - The different options or choices that users will be able to vote on. Each option should be on a separate line. Max 25 options.
+- **Votes per user** - Determines how many times each user can vote in the poll
+  - **Single vote** - Each user can only vote once. Voters can switch their single vote to another option, or click the same option again to remove their vote.
+  - **Multiple votes** - Each user can vote for multiple options. Voters can remove their vote for a specific option by clicking the same option again.
+- **Voter Responses** - Determines if and how the names/identities of the voters are displayed.
+  - **Public** - The names of the users that have voted are displayed publicly with the results.
+  - **Anonymous** - The names are of the users are not displayed anywhere.
+  - **Confidential** - The names of the users are only displayed to the poll creator.
+- **Poll Results** - Determines how the results of the poll (i.e. the vote count) are displayed.
+  - **Real-time** - The poll results are displayed alongside the poll and updated in real-time.
+  - **After poll closed** - The poll results are displayed alongside the poll only when the poll is closed. The poll creator is also restricted from viewing results until the poll is closed. Voters are notified of a successful vote via a private ephemeral message.
+  - **Not shown to participants** - The poll results are never shown publicly to participants. Only the poll creator may view them. Voters are notified of a successful vote via a private ephemeral message.
+
+## Managing Polls
+
+Each poll can be managed through the options in the `•••` dropdown menu next to the poll. Only the poll creator may use these options; other users will see a permissions error dialog.
+
+![Poll Menu](/productivity-tools/polls/poll-menu.png)
+
+### View Results
+
+The poll creator may view the voting results of the poll, depending on the **Poll Results** setting. The names of voters may be visible here, if the **Voter Responses** setting is set to _Public_ or _Confidential_.
+
+### Edit Poll
+
+Once a poll has been created, only the Poll Question may be updated.
+
+### Close Poll
+
+Once a poll has been closed, no more votes may be cast. The option buttons will no longer be displayed. The poll results and responses may be displayed, depending on the **Poll Results** and **Voter Responses** settings.
+
+The poll creator may re-open a closed poll, for example, if they forgot to include someone's vote.
+
+### Delete Poll
+
+The poll and the voting results will be permanently deleted. This action cannot be undone.
