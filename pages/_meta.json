@@ -7,23 +7,25 @@
   "getting-started": "Getting Started",
   "basics": "Basics",
   "branding": "Branding Guide",
+
+  "-- Slack Administration": {
+    "type": "separator",
+    "title": "Slack Administration"
+  },
+  "shortcuts": "Shortcuts",
+  "channel-inviter": "Channel Inviter",
+
   "-- Modules": {
     "type": "separator",
     "title": "Modules"
   },
   "community": "Community",
   "companion-site": "Companion Site",
-  "channels-and-feeds": "Channels & Feeds",
+  "member-engagement": "Member Engagement",
   "events": "Events",
   "gamification": "Gamification",
-  "integrations": "Integrations",
-
-  "-- Productivity Tools": {
-    "type": "separator",
-    "title": "Productivity Tools"
-  },
-  "channel-inviter": "Channel Inviter",
-  "polls": "Polls",
+  "developers": "Developers",
+  "channels-and-feeds": "Channels & Feeds",
 
   "--": {
     "type": "separator"
