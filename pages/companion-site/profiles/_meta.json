@@ -1,6 +1,7 @@
 {
+  "getting-started": "Getting Started",
+  "profile-fields": "Member Profile",
   "profile-settings": "Profile Settings",
-  "profile-fields": "Profile Fields",
   "directory": "Directory Settings",
   "allowed-bots": "Allowed Bot Profiles"
 }

@@ -1,10 +1,9 @@
 {
   "getting-started": "Getting Started",
-  "manage-site": "Managing the Site",
   "pages": "Pages",
-  "site-images": "Site Images",
   "profiles": "Profiles",
-  "call-to-action": "Call to Action",
+  "general": "General Settings",
   "home-page": "Home Page",
+  "call-to-action": "Call to Action",
   "integrations": "Integrations"
 }
