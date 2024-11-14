@@ -1,9 +1,7 @@
 {
   "getting-started": "Getting Started",
-  "manage-community": "Managing the Community",
-  "community-images": "Community Images",
+  "general": "General Settings",
   "permission-sets": "Permission Sets",
   "groups": "Groups",
-  "onboarding": "New Member Onboarding",
   "notification-settings": "Notification Settings"
 }
