@@ -3,5 +3,6 @@
   "activate-channel": "Activate a Channel",
   "create-feed": "Create a Feed",
   "manage-feeds": "Manage Feeds",
-  "agent-settings": "Agent Settings"
+  "agent-settings": "Agent Settings",
+  "engagement-settings": "Engagement Settings"
 }
