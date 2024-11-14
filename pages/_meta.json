@@ -12,6 +12,7 @@
     "type": "separator",
     "title": "Slack Administration"
   },
+  "slack-admin-getting-started": "Getting Started",
   "shortcuts": "Shortcuts",
   "channel-inviter": "Channel Inviter",
 
