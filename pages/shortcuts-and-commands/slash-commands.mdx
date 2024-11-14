@@ -1,0 +1,23 @@
+import { Callout } from "nextra/components";
+
+# Slash Commands
+
+Use Tightknit's [slash commands](https://slack.com/help/articles/360057554553-Use-shortcuts-to-take-actions-in-Slack) to take actions related to your community in Slack. For example, the Channel Inviter is a powerful productivity tool that allows you to invite large numbers of users to new Slack channels
+
+![Channel Inviter command](/slack-administration/shortcuts/commands/channel-inviter-command.gif)
+
+## How to Access Slash Commands in Slack
+
+As the name suggests, slash commands can be accessed simply by typing slash `/` in the chat, followed by the name of the command and the command inputs (if applicable).
+
+<Callout type="info">
+  The channel in which you type the command is often relevant to the action, so
+  take note of where you're typing!
+</Callout>
+
+## Tightknit Commands
+
+| **Command**       | **Inputs**                                      | **Description**                                                                                                                                                                            | **Who can use it?** |
+| :---------------- | :---------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| `/invite-all`     |                                                 | Launches the _Channel Inviter_ wizard to invite all members in the entire Slack workspace to the current channel.<br/>You will be asked for confirmation before the bulk invites are sent. | Admins only         |
+| `/invite-channel` | (_optional_) the Slack channel, e.g. `#general` | Launches the _Channel Inviter_ wizard to invite all members of another Slack channel to the current channel.<br/>You will be asked for confirmation before the bulk invites are sent.      | Admins only         |

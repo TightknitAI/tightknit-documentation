@@ -13,8 +13,7 @@
     "title": "Slack Administration"
   },
   "slack-admin-getting-started": "Getting Started",
-  "shortcuts": "Shortcuts",
-  "channel-inviter": "Channel Inviter",
+  "shortcuts-and-commands": "Shortcuts & Commands",
 
   "-- Modules": {
     "type": "separator",
