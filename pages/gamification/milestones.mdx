@@ -7,4 +7,42 @@ import { Callout } from "nextra/components";
   participate, please contact [Support](mailto:support@tightknit.ai).
 </Callout>
 
-Coming soon!
+A **Milestone** is a certain goal or criteria that a member of the community can meet in order to receive a reward.
+
+## Administration
+
+Admin users can manage their Milestones and Milestone settings under the **Gamification** section in the Tighktnit app home.
+
+### Create a New Milestone
+
+To create a new Milestone, click the `Milestones` button in the Gamification module to access the **Milestones List** panel.
+
+![Milestone List Modal](/gamification/milestones/milestones-list-modal.png)
+
+Click `+ Create Milestone` button to access the Milestone creation modal, where you can configure the following:
+
+- **Name** - the name of the Milestone
+- **Action** - the [action type](#action-types) of the Milestone
+- **Count Threshold** - for supported action types, the Count Threshold is the number of actions the member must perform in order to complete the Milestone. For example, for the _"Post in channel"_ Milestone, setting the Count Threshold to 10 would mean the member must post 10 times in the channel to complete the Milestone. See [action types](#action-types).
+- **Scope to: Slack Channel** - for supported action types, the actions can be scoped to a specific Slack channel. Corresponding actions by a member must occur in this channel to count towards completion of the Milestone.
+- **Badge Award (optional)** - when a member completes the Milestone, they will be awarded the [Badge](/gamification/badges)
+
+![Create Milestone Modal](/gamification/milestones/create-milestone-modal.png)
+
+### Action Types
+
+| **Action Type**                                            | **Description**                                                                                                                                  | **Count Method**                                                                                                                      |
+| :--------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
+| **Post in channel**                                        | Top-level messages sent by a user, in a channel in which [Tightknit is activated](/channels-and-feeds/activate-channel).                         | Counted per message                                                                                                                   |
+| **Reply to message (not to self)**                         | Threaded replies sent by a user to another user, in a channel in which [Tightknit is activated](/channels-and-feeds/activate-channel).           | Counted per unique thread (i.e. additional replies in the _same_ thread do not count towards the Milestone)                           |
+| **# of reactions given (not to self)**                     | Reactions added by a user to another user's message, in a channel in which [Tightknit is activated](/channels-and-feeds/activate-channel).       | Counted per number of reactions given                                                                                                 |
+| **# of reactions received on own message (not from self)** | Reactions received on a user's message by another user, in a channel in which [Tightknit is activated](/channels-and-feeds/activate-channel).    | Counted per number of reactions received                                                                                              |
+| **# of messages reacted to (not to self)**                 | A user adds at least 1 reaction to another user's message, in a channel in which [Tightknit is activated](/channels-and-feeds/activate-channel). | Counter per number of unique messages reacted to (i.e. additional reactions on the _same_ message do not count towards the Milestone) |
+| **Join the workspace**                                     | A user first joins the Slack workspace                                                                                                           |                                                                                                                                       |
+| **Register for an Event**                                  | A user registers for a [Calendar Event](/events/getting-started) through Tightknit                                                               | Counter per unique Event (i.e. registering multiple times for the _same_ Event only counts once towards the Milestone)                |
+
+## Completing Milestones
+
+When a member meets the conditions required to complete a Milestone in the community, they will receive a private notification along with the award Badge, if any is configured.
+
+![Create Milestone Modal](/gamification/milestones/milestone-achieved-msg.png)
