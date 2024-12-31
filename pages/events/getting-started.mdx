@@ -30,19 +30,34 @@ Alternatively, users can access the modal by clicking the `Events` button in the
 
 ## Events List Panel
 
-To see your community's upcoming events within a Slack workspace, use the [global shortcut](/events/getting-started#accessing-events) to show events to all users within a workspace.
+To see your community's upcoming events within a Slack workspace, any user in the workspace may use the [global shortcut](/events/getting-started#accessing-events) to show events to all users within a workspace.
 The easiest way to access this shortcut is to type `/events` in any message input box.
-This will display a list of all events that are currently scheduled.
+This will display a list of all public events that are currently scheduled.
 
 ![Manage Events Panel](/events/manage-events-panel.png)
 
-From this panel, everyone in the community can:
+### Views
 
-- See all upcoming events
-- See all past events
+![Events Panel admin filter menu](/events/events-panel-filter-menu-admin.png)
 
-For Admins and designated champion users they can:
+From this panel, members can select a view to filter the listed events depending on their permissions.
+
+| **Filter**     | **Standard User**      | **Events Champion**                                        | **Admin**                                 |
+| :------------- | :--------------------- | :--------------------------------------------------------- | ----------------------------------------- |
+| Upcoming       | Public upcoming events | Public upcoming events + unlisted events owned by the user | All upcoming events (public and unlisted) |
+| Past           | Public past events     | Public past events + unlisted events owned by the user     | All past events (public and unlisted)     |
+| My Drafts      | --                     | Events owned by the user in draft state                    | Events owned by the user in draft state   |
+| Needs Approval | --                     | Events owned by the user awaiting admin approval           | All events awaiting admin approval        |
+
+### Actions
+
+From the panel, admin users and designated [events champion](/community/permission-sets#create-a-permission-set) users can:
 
 - Create new event drafts
 - Publish events or Request approval for events (Learn more about the approval process [here](/events/approve-event.md))
 - Edit and delete events
+
+<Callout type="info">
+  Events Champions may only edit an event if they are the owner or were marked
+  as the Host of the event.
+</Callout>
