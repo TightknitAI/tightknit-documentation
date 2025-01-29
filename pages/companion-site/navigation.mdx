@@ -1,15 +1,47 @@
 import { Callout, Steps } from "nextra/components";
 
-# Navigation
+# Navigation Items [Beta]
 
-Within the Navigation settings modal, you can configure the up to 3 custom links that will appear in the [navigation sidebar](/companion-site/pages/navbar-and-sidebar#sidebar) of the companion site.
+Within the Navigation Items settings modal, you can configure the up to 3 custom navigation items that will appear in the [navigation sidebar](/companion-site/pages/navbar-and-sidebar#sidebar) of the companion site. Each item can either be an external link or an internal link to an embedded page.
 
-Each navigation link must be input as label + URL, on a separate line in the following format:
+Each navigation item configuration must be input on a separate line. For example:
 
 ```
-Knowledge Base, https://example.com/
-Contact Support, https://example.com/
-Download the App, https://example.com/
+Terms of Service | https://tightknit.ai/legal/terms-of-service | terms-of-service
+Knowledge Base | https://example.com
+Download the App | https://example.com
 ```
 
-![Community Settings Section](/tightknit-site/navigation/site-navigation-modal.png)
+![Navigation Items Modal](/tightknit-site/navigation/site-navigation-modal.png)
+
+## Navigation Item Types
+
+### External Link
+
+An external link is a simple URL that will be opened in a new tab when the navigation item is clicked. The navigation item configuration must follow the format: `Name | URL`.
+
+For example, the following configuration will create a navigation item with the label "Knowledge Base" that will open the URL "https://example.com" in a new tab when clicked:
+
+```
+Knowledge Base | https://example.com
+```
+
+### Internal Link (Embedded Page)
+
+An internal link points to an embedded page within the companion site. The navigation item configuration must follow the format: `Name | URL | slug`. When an internal link is configured, the the embedded page is added to the companion site at the URL: `https://<your-site>/p/<slug>`.
+
+For example, the following configuration will create a navigation item with the label "Terms of Service" that will open the embedded page at the URL: `https://<your-site>/p/terms-of-service`. This page will contain an embedded iframe with the contents of the URL `https://example.com`.
+
+```
+Terms of Service | https://example.com | terms-of-service
+```
+
+![ Internal Embedded Page ](/tightknit-site/navigation/internal-embedded-page.png)
+
+<Callout type="info">
+  Embedded pages are useful for displaying content from external sources within
+  your companion site. For example, you can embed your community's calendar or
+  other content from external sources. For best practices, make sure the
+  embedded URL is the same domain as the companion site (see [Site
+  Details](/companion-site/general#site-details)).
+</Callout>
